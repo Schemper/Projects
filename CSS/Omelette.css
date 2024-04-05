@@ -1,0 +1,127 @@
+* {
+  margin: 0 auto;
+}
+
+body  {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(45, 45, 45);
+  line-height: 2;
+  background-color: rgb(237, 217, 181);
+}
+
+header {
+  width: 320px;
+}
+
+main {
+  background-color: rgb(255, 255, 255);
+  width: 320px;
+  text-shadow: none;
+  font-weight: lighter;
+}
+
+section, table {
+  padding: 20px;
+}
+
+img {
+  width: 320px;
+  object-fit: cover;
+  margin: 0 auto;
+  
+}
+
+h1, h2, h3 {
+  font-family: "Young Serif";
+  line-height: 1;
+  margin: 20px 0 20px 0;
+}
+
+h1 {
+  color: rgb(45, 45, 45);
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+h2 {
+  color: rgb(125, 75, 41);
+}
+
+h3 {
+  color: rgb(85, 23, 60);
+}
+
+.second-section {
+  border-bottom: 1px solid #dddddd;
+}
+
+.prepare {
+  background-color: rgb(255, 248, 249);
+  padding: 10px;
+  width: inherit;
+  border-radius: 15px;
+}
+
+.ingredients, .styled-list ul li::before {
+  color:red;
+  margin-right: 10px;
+}
+
+.styled-list {
+  border-bottom: 1px solid #dddddd;
+  padding: 20px;
+  line-height: 2;
+}
+
+.nutrition-table {
+  width: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.nutrition-table tr td:first-child +td{ color: rgb(125, 75, 41);
+  font-weight: 600;
+}
+
+.nutrition-table tbody tr, .nutrition-table tbody tr td {
+  border-bottom: 1px solid #dddd;
+  padding: 10px;
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  header {
+    width: 800px;
+  }
+
+  img {
+    width: 800px;
+    border-radius: 20px;
+  }
+
+  main {
+    width: 800px;
+    padding: 20px;
+    border-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 1440px ) {
+  header {
+    width: 1200px;
+  }
+
+  img {
+    width: 1200px;
+  }
+
+  main {
+    width: 1200px;
+  }
+}
