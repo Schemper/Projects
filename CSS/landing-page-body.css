@@ -1,0 +1,118 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* Remove default list styles */
+ul, ol {
+    list-style: none;
+}
+
+/* Remove default hyperlink styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove default margin and padding from body */
+body {
+  margin: 0 auto;
+  background-color: hsl(217, 28%, 15%);
+  color: white;
+  width: 375px;
+  font-family: "Open Sans";
+}
+
+h1, h2, h3 {
+  font-family: "Raleway";
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+main {
+  background-color: hsl(218, 28%, 13%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.illustration {
+  width: 320px;
+  object-fit: cover;
+}
+
+button {
+  background-color: hsl(198, 60%, 50%);
+  border: none;
+  color: white;
+  padding: 10px ;
+  border-radius: 30px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.get-started, .second-section {
+  text-align: center;
+}
+
+.icon {
+  margin: 100px 0 50px 0;
+  width: 70px;
+}
+
+.third-section {
+  margin-bottom: 100px;
+}
+
+.fourth-section .title {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+.fourth-section .bg-quotes {
+  width: 30px;
+}
+
+.testimonial {
+  background-color: hsl(219, 30%, 18%);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.testimonial img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.fifth-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

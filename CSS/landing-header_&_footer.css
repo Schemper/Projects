@@ -1,0 +1,33 @@
+
+header {
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.logo{
+  width: 100px;
+}
+
+.right-nav {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-nav .features:hover {
+  cursor: pointer;
+  background-color: hsl(176, 68%, 64%);
+}
+
+footer {
+  background-color: hsl(216, 53%, 9%);
+  color: white;
+  padding: 20px;
+}
+
+footer .socials-image svg {
+ 
+  }
