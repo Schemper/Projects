@@ -26,12 +26,6 @@ ul, ol {
     list-style: none;
 }
 
-/* Remove default hyperlink styles */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 /* Remove default margin and padding from body */
 body {
   margin: 0 auto;
@@ -69,11 +63,14 @@ button {
   background-color: hsl(198, 60%, 50%);
   border: none;
   color: white;
-  padding: 10px ;
+  padding: 20px;
   border-radius: 30px;
   margin-top: 30px;
-  display: flex;
-  justify-content: center;
+  cursor: pointer;
+}
+
+.get-started button {
+  padding: 20px 100px;
 }
 
 .get-started, .second-section {
@@ -89,6 +86,10 @@ button {
   margin-bottom: 100px;
 }
 
+.fourth-section {
+  padding-bottom: 250px
+}
+
 .fourth-section .title {
   display: flex;
   padding: 10px;
@@ -97,6 +98,10 @@ button {
 
 .fourth-section .bg-quotes {
   width: 30px;
+}
+
+.fifth-section {
+ 
 }
 
 .testimonial {
@@ -112,7 +117,23 @@ button {
 }
 
 .fifth-section {
+  position: absolute;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
+  bottom: -3000px;
+  width: 335px;
+  background-color: hsl(217, 28%, 15%);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+.fifth-section input {
+  border: none;
+  padding: 20px ;
+  border-radius: 30px;
+  margin-top: 30px;
 }
