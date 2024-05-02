@@ -33,6 +33,30 @@ body {
   color: white;
   width: 375px;
   font-family: "Open Sans";
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+}
+
+main {
+  display: flex;
+  justify-content: center; /* Horizontally center the section */
+  align-items: center; /* Vertically center the section */
+  background-color: hsl(218, 28%, 13%);
+  padding: 20px;
+  flex-direction: column;
+}
+
+
+button {
+  background-color: hsl(198, 60%, 50%);
+  border: none;
+  color: white;
+  padding: 20px;
+  border-radius: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 h1, h2, h3 {
@@ -47,34 +71,14 @@ h2 {
   font-size: 25px;
 }
 
-main {
-  background-color: hsl(218, 28%, 13%);
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.illustration {
-  width: 320px;
-  object-fit: cover;
-}
-
-button {
-  background-color: hsl(198, 60%, 50%);
-  border: none;
-  color: white;
-  padding: 20px;
-  border-radius: 30px;
-  margin-top: 30px;
-  cursor: pointer;
-}
-
 .get-started button {
   padding: 20px 100px;
 }
 
-.get-started, .second-section {
-  text-align: center;
+.illustration, .illustration-1 {
+  width: 320px;
+  object-fit: cover;
+  margin-bottom: 50px;
 }
 
 .icon {
@@ -83,37 +87,69 @@ button {
 }
 
 .third-section {
-  margin-bottom: 100px;
+  margin-bottom: 150px;
+  margin-top: 150px;
+  text-align: left;
+}
+
+.third-section a {
+  color:hsl(176, 68%, 64%);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.third-section a img {
+  text-decoration: underline;
+  margin-left: 8px;
+}
+
+.third-section a:hover {
+  color: white;
 }
 
 .fourth-section {
-  padding-bottom: 250px
+  width: 300px;
+  text-align: left;
+  padding-bottom: 250px;
 }
 
-.fourth-section .title {
-  display: flex;
-  padding: 10px;
-  align-items: center;
-}
-
-.fourth-section .bg-quotes {
+.bg-quotes {
   width: 30px;
-}
-
-.fifth-section {
- 
 }
 
 .testimonial {
   background-color: hsl(219, 30%, 18%);
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 30px 25px;
+  margin-bottom: 30px;
   border-radius: 10px;
+  font-size: 13px;
 }
 
-.testimonial img {
+.badge {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.badge img {
   width: 30px;
+  object-fit: cover;
   border-radius: 50%;
+}
+
+.badge p {
+  padding-left: 10px;
+}
+
+.badge .profile-name {
+  font-weight: 700;
+}
+
+.badge .position {
+  font-size: 10px;
 }
 
 .fifth-section {
@@ -122,13 +158,14 @@ button {
   display: flex;
   flex-direction: column;
   text-align: center;
-  bottom: -3000px;
   width: 335px;
   background-color: hsl(217, 28%, 15%);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   font-size: 14px;
+  z-index: 10;
+  bottom: 850px;
 }
 
 .fifth-section input {
@@ -136,4 +173,51 @@ button {
   padding: 20px ;
   border-radius: 30px;
   margin-top: 30px;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    width: 800px;
+    font-size: 13px;
+  }
+
+  section .get-started {
+    margin: 0 auto;
+    width: 500px;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .get-started p {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 15px;
+    line-height: 1.7;
+  }
+
+  .get-started button {
+    padding: 10px 50px;
+    margin-top: 15px;
+  }
+
+  .second-section {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    column-gap: 60px;
+    margin-top: 40px;
+  }
+
+  .third-section {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    column-gap: 40px;
+    margin-bottom: 30px;
+  }
+
+  .inside {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    column-gap: 30px;
+    justify-content: center;    
+  }
 }

@@ -15,37 +15,47 @@ header {
   width: 150px;
   display: flex;
   justify-content: space-between;
+  transition: all 0.5s ease;
 }
 
-.right-nav .features:hover {
+.right-nav :hover {
   cursor: pointer;
-  background-color: hsl(176, 68%, 64%);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 footer {
   background-color: hsl(216, 53%, 9%);
   color: white;
   padding: 220px 20px 20px 20px;
-  
+  text-align: left;
+  position: relative;
 }
 
-footer .location, .contact, .email {
+.fylo-footer-logo {
+  padding-left: 15px;
+  padding-bottom: 30px;
+}
+
+.location, .contact, .email {
   display: flex;
-  margin-top: 20px;
+  align-items: flex-start;
+  margin: 10px 0 15px 0;
 }
 
-.email img {
-  padding-right: 10px;
+.location p, .contact p, .email p {
+  margin-left: 25px;
 }
-
 
 .addition div {
-  padding: 50px 0 0 20px;
+  margin-top: 70px;
 }
+
 
 .addition div p {
   margin-top: 20px;
 }
+
 
 footer .socials-image {
  margin-top: 100px;
@@ -53,7 +63,38 @@ footer .socials-image {
  text-align: center;
 }
 
+
 .socials-image svg {
   width: 40px;
   margin-right: 10px;
+  transition: all 0.5s ease;
+}
+
+.socials-image svg:hover {
+  cursor: pointer;
+  fill: hsl(176, 68%, 64%);
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    width: 800px;
+  }
+
+  .logo{
+    margin-left: 40px;
+  }
+  
+  .right-nav {
+    width: 200px;
+    margin-right: 40px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-inside {
+    display: flex;
+  }
 }
