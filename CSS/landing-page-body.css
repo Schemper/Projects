@@ -177,7 +177,7 @@ h2 {
 
 @media only screen and (min-width: 1000px) {
   body {
-    width: 800px;
+    width: 1000px;
     font-size: 13px;
   }
 
@@ -209,15 +209,48 @@ h2 {
 
   .third-section {
     display: grid;
-    grid-template-columns: 320px 1fr;
-    column-gap: 40px;
+    grid-template-columns: 320px 400px;
+    column-gap: 100px;
     margin-bottom: 30px;
   }
 
+  .fourth-section {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .bg-quotes {
+    position: absolute;
+    top: -25px;
+  }
+
   .inside {
-    display: grid;
-    grid-template-columns: 200px 200px 200px;
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
     justify-content: center;    
+  }
+
+  .fifth-section {
+    display: flex;
+    width: 650px;
+    padding: 30px 60px;
+    border-radius: 10px;
+    bottom: 390px;
+    font-size: 12px;
+  }
+
+  .fifth-section input {
+    margin-right: 20px;
+    width: 280px;
+    padding: 10px 30px;
+    height: 15px;
+  }
+  
+  .fifth-section button {
+    font-size: 12px;
+    padding: 10px 20px;
   }
 }

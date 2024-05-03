@@ -47,18 +47,27 @@ footer {
   margin-left: 25px;
 }
 
-.addition div {
-  margin-top: 70px;
+.contact-email {
+  margin-bottom: 70px;
 }
 
-
 .addition div p {
-  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+}
+
+.addition p:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.addition div {
+  margin-bottom: 70px;
 }
 
 
 footer .socials-image {
- margin-top: 100px;
  fill: white;
  text-align: center;
 }
@@ -75,9 +84,9 @@ footer .socials-image {
   fill: hsl(176, 68%, 64%);
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   header {
-    width: 800px;
+    width: 1000px;
   }
 
   .logo{
@@ -92,9 +101,27 @@ footer .socials-image {
   footer {
     display: flex;
     flex-direction: column;
+    padding-top: 150px;
   }
 
   .footer-inside {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
+
+  .location {
+    width: 300px;
+  }
+
+  .contact-email {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .addition {
+    display: flex;
+    column-gap: 50px;
+  }
+
 }
