@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Style/forms.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h1>GeeksforGeeks Survay Form</h1>
+
+  <form>
+    <div class="form_control">
+      <label for="name">Name</label>
+      
+      <!--Input Name here-->
+      <input type="text" placeholder="Enter your name" id="name">
+    </div>
+
+    <div class="form_control">
+      <label for="email">Email</label>
+      
+      <!--Input Email here-->
+      <input type="email" placeholder="Enter your email" id="email">
+    </div>
+
+    <div class="form_control">
+      <label for="DOB">Birthdate</label>
+      
+      <!--Input DOB-->
+      <input type="date" id="DOB">
+    </div>
+    
+    <div class="form_control">
+      <label for="Occupation">Select the best option that best decribes you</label>
+      
+      <!--Pick an occupation-->
+
+      <select name="" id="occupation">
+        <option value="Student">Student</option>
+        <option value="Intern">Intern</option>
+        <option value="Professional">Professional</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form_control">
+      <label for="">Would you recommend GeeksforGeeks to a friend?</label>
+      
+      <!--Are you willing to recommend-->
+      <label for="Yes">
+        <input type="radio" id="Yes" name="recommend">Yes</input>
+      </label>
+      
+
+      <label for="No">
+        <input type="radio" name="recommend" id="No">No</input>
+      </label>
+      
+
+      <label for="Maybe">
+        <input type="radio" id="Maybe" name="recommend">Maybe</input>
+      </label>
+    </div>
+
+    <div class="form_control">
+      <label for="">Languages and Frameworks known 
+        <small>(check all that apply)</small>
+      </label>
+      
+      <label for="ind">
+        <input type="checkbox" id="ind">C</input>
+      </label>
+
+      <label for="ind-1">
+        <input type="checkbox" id="ind-1">C++</input>
+      </label>
+
+      <label for="ind-2">
+        <input type="checkbox" id="ind-2">C#</input>
+      </label>
+
+      <label for="ind-3">
+        <input type="checkbox" id="ind-3">Java</input>
+      </label>
+
+      <label for="ind-4">
+        <input type="checkbox" id="ind-4">Python</input>
+      </label>
+
+      <label for="ind-5">
+        <input type="checkbox" id="ind-5">JavaScript</input>
+      </label>
+
+      <label for="ind-6">
+        <input type="checkbox" id="ind-6">React</input>
+      </label>
+
+      <label for="ind-7">
+        <input type="checkbox" id="ind-7">Angular</input>
+      </label>
+
+      <label for="ind-8">
+        <input type="checkbox" id="ind-8">Django</input>
+      </label>
+
+      <label for="ind-9">
+        <input type="checkbox" id="ind-9">Spring</input>
+      </label>
+    </div>
+
+    <div class="form_control">
+      <label for="comment">
+        Any comments or suggestions
+      </label>
+
+      <!--Submit a comment-->
+      <textarea name="comment" id="comment" 
+        placeholder="Enter your comment here">
+      </textarea>
+    </div>
+
+    <!--Submit button-->
+    <button type="submit" value="submit">
+      Submits
+    </button>
+  </form>
+</body>
+</html>
