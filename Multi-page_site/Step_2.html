@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CSS/Multi-page/template.css">
+  <link rel="stylesheet" href="/CSS/Multi-page/main_section.css">
+  <title>Step 2</title>
+</head>
+<body>
+  <header>
+    <img src="/images/Multi-page/bg-sidebar-mobile.svg" alt="">
+
+    <div class="page_number">
+      <button>
+        <a href="Step_1.html">1</a>
+      </button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+    </div>
+  </header>
+
+  <main>
+    <h2>Select your plan</h2>
+    <p>You have the option of monthly or yearly billing.</p>
+
+    <section>
+      <div class="container">
+        <div>
+          <img src="/images/Multi-page/icon-arcade.svg" alt="">
+        </div>
+        <div class="plan">
+          <p class="level">Arcade</p>
+          <p class="fee">$9/mo</p>
+        </div>
+      </div>
+      <div class="container">
+        <div>
+          <img src="/images/Multi-page/icon-advanced.svg" alt="">
+        </div>
+        <div class="plan">
+          <p class="level">Advanced</p>
+          <p class="fee">$12/mo</p>
+        </div>
+      </div>
+      <div class="container">
+        <div>
+          <img src="/images/Multi-page/icon-pro.svg" alt="">
+        </div>
+        <div class="plan">
+          <p class="level">Pro</p>
+          <p class="fee">$15/mo</p>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="duration-switch">
+      <p>Monthly</p> 
+      <div>
+        <div class="white"></div>
+      </div>
+      <p>Yearly</p>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <p>Go Back</p>
+    <button class="Next">
+      Next Step
+    </button>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var footer = document.getElementById('footer');
+      var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollPosition > 0) {
+        footer.style.display = 'none';
+      } else {
+        footer.style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>
