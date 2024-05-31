@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step 3</title>
   <link rel="stylesheet" href="/CSS/Multi-page/template.css">
   <link rel="stylesheet" href="/CSS/Multi-page/main_section.css">
-  <title>Step 2</title>
 </head>
 <body>
   <header>
@@ -22,47 +22,48 @@
   </header>
 
   <main>
-    <h2>Select your plan</h2>
-    <p>You have the option of monthly or yearly billing.</p>
+    <h2>Pick add-ons</h2>
+    <p>Add-ons help enhance your gaming experience.</p>
 
     <section>
       <div class="container">
         <div>
-          <img src="/images/Multi-page/icon-arcade.svg" alt="">
+          <input type="checkbox">
         </div>
         <div class="plan">
-          <p class="level">Arcade</p>
-          <p class="fee">$9/mo</p>
+          <p class="level">Online service</p>
+          <p class="fee">Access to multiplayer games</p>
+        </div>
+        <div>
+          +$1/mo
         </div>
       </div>
       <div class="container">
         <div>
-          <img src="/images/Multi-page/icon-advanced.svg" alt="">
+          <input type="checkbox">
         </div>
         <div class="plan">
-          <p class="level">Advanced</p>
-          <p class="fee">$12/mo</p>
+          <p class="level">Larger storage</p>
+          <p class="fee">Extra 1TB of cloud save</p>
+        </div>
+        <div>
+          +$2/mo
         </div>
       </div>
       <div class="container">
         <div>
-          <img src="/images/Multi-page/icon-pro.svg" alt="">
+          <input type="checkbox">
         </div>
         <div class="plan">
-          <p class="level">Pro</p>
-          <p class="fee">$15/mo</p>
+          <p class="level">Customizable profile</p>
+          <p class="fee">Custom theme on your profile</p>
+        </div>
+        <div>
+          +$2/mo
         </div>
       </div>
     </section>
 
-
-    <div class="duration-switch">
-      <p>Monthly</p> 
-      <div>
-        <div class="white"></div>
-      </div>
-      <p>Yearly</p>
-    </div>
   </main>
 
   <footer id="footer">
@@ -71,12 +72,5 @@
       Next Step
     </button>
   </footer>
-
-  <script>
-    document.querySelector('.duration-switch').addEventListener('click', function() {
-      this.classList.toggle('active');
-    });
-  </script>
-
 </body>
 </html>
