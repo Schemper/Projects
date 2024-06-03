@@ -11,9 +11,15 @@
     <img src="/images/Multi-page/bg-sidebar-mobile.svg" alt="">
 
     <div class="page_number">
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
+      <button>
+        <a href="Step_1.html">1</a>
+      </button>
+      <button>
+        <a href="Step_2.html">2</a>
+      </button>
+      <button>
+        <a href="Step_3.html">3</a>
+      </button>
       <button>4</button>
     </div>
     
@@ -24,25 +30,52 @@
     <p>Please provide your name, email address, and phone number.</p>
 
     <label for="Name">Name</label>
-    <input type="text" id="Name" placeholder="e.g. Stephen King">
+    <input type="text" id="Name" placeholder="e.g. Stephen King" required>
 
     <label for="email">
       Email Address
     </label>
-    <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+    <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
 
-    <label for="phone number">
+    <label for="phone_number">
       Phone Number
     </label>
-    <input type="tel" id="phone number" placeholder="e.g. +1 234 567 890">
+    <input type="tel" id="phone number" placeholder="e.g. +1 234 567 890" required>
       
   </main>
 
   <footer>
-    <button class="Next">
+    <button class="Next" type="submit" onclick="validateForm();" id="nextStepButton">
       Next Step
     </button>
   </footer>
+<script>
 
+  function validateForm() {
+    document.querySelector('.nextStepButton').addEventListener('click', function() {
+      const username = document.getElementById('username').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = dpcument.getElementById('phone_number').value.trim();
+
+      if (username === '' || email === '' || phone === '') {
+          alert('Please fill in all required fields.');
+        } else {
+          window.location.href = 'Step_2.html';
+          }
+    })
+  }
+ 
+  /*document.getElementById('nextStepButton').addEventListener('click', function() {
+    const username = document.getElementById('username').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    if (username === '' || email === '') {
+        alert('Please fill in all required fields.');
+    } else {
+        window.location.href = 'Step_2.html';
+    }
+  });*/
+
+</script>
 </body>
 </html>

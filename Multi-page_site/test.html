@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with JavaScript Navigation</title>
+    <style>
+        .error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="customForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <span class="error" id="usernameError">Username is required.</span>
+        <br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError">Email is required.</span>
+        <br><br>
+
+        <button type="button" id="nextStepButton">Next Step</button>
+    </form>
+
+    <script>
+        document.getElementById('nextStepButton').addEventListener('click', function(event) {
+            let isValid = true;
+
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const usernameError = document.getElementById('usernameError');
+            const emailError = document.getElementById('emailError');
+
+            if (username.value.trim() === '') {
+                usernameError.style.display = 'inline';
+                isValid = false;
+            } else {
+                usernameError.style.display = 'none';
+            }
+
+            if (email.value.trim() === '') {
+                emailError.style.display = 'inline';
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+
+            if (isValid) {
+                window.location.href = 'Step_1.html';
+            }
+        });
+    </script>
+</body>
+</html>

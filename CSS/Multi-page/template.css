@@ -104,5 +104,5 @@ footer .Next {
   border-radius: 3px;
   font-size: 12px;
   margin-right: 10px;
-  
+  cursor: pointer;
 }
