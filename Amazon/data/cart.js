@@ -61,6 +61,6 @@ export function calculateCartQuantity() {
   cart.forEach((item) => {
     cartQuantity += item.quantity;
   });
-
+  saveToStorage();
   return cartQuantity;
 }

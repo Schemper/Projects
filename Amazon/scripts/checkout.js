@@ -35,14 +35,28 @@ cart.forEach((cartItem) => {
           </div>
           <div class="product-quantity">
             <span>
-              Quantity: <span class="quantity-label">${cartItem.quantity}</span>
+              Quantity: <span class="quantity-label 
+              js-quantity-label-${matchingProduct.id}">
+              ${cartItem.quantity}
+              </span>
             </span>
-            <span class="update-quantity-link link-primary">
+            <span class="update-quantity-link link-primary 
+            js-update-quantity-link" 
+            data-product-id="${matchingProduct.id}">
               Update
             </span>
-            <input class="input-quantity-link"></input>
-            <span class="link-primary">Save</span>
-            <span class="delete-quantity-link link-primary js-delete-link" data-product-id = "${matchingProduct.id}">
+            <input class="input-quantity-link 
+            js-input-quantity-${matchingProduct.id}
+            js-input-quantity"
+            data-product-id="${matchingProduct.id}"></input>
+            <span class="link-primary 
+            save-quantity-link 
+            js-save-quantity-link"
+            data-product-id="${matchingProduct.id}">
+            Save
+            </span>
+            <span class="delete-quantity-link link-primary js-delete-link" 
+            data-product-id="${matchingProduct.id}">
               Delete
             </span>
           </div>
@@ -102,6 +116,7 @@ document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
 document.querySelectorAll('.js-delete-link').forEach((link) => {
   link.addEventListener('click', () => {
     const productId = link.dataset.productId;
+    
     removeFromCart(productId);
     
     const container = document.querySelector(`.js-cart-item-container-${productId}`)
@@ -122,4 +137,89 @@ function updateCartQuantity() {
 updateCartQuantity();
 
 
-document.querySelector('')
+document.querySelectorAll('.js-update-quantity-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      const productId = link.dataset.productId
+      const container = document.querySelector(`.js-cart-item-container-${productId}`);
+      container.classList.add('is-editing-quantity');
+      
+    });
+  });
+
+
+document.querySelectorAll(`.js-save-quantity-link`)
+.forEach((link) => {
+  link.addEventListener('click', () => {
+    const productId = link.dataset.productId;
+    const container =  document.querySelector(`.js-cart-item-container-${productId}`);
+
+    let quantityElem = document.querySelector(`.js-input-quantity-${productId}`).value
+    
+    let newQuantity = Number(quantityElem);
+
+    if (!cautionAlert(newQuantity)) {
+      return; // Halt further execution if the input is invalid
+    }
+
+    updateQuantity(productId, newQuantity);
+
+    container.classList.remove('is-editing-quantity');
+    
+  });
+});
+
+
+function updateQuantity(productId, newQuantity) {
+  
+  cart.forEach((cartItem) => {
+    if (productId === cartItem.productId) {
+      cartItem.quantity = newQuantity
+
+      document.querySelector(`.js-quantity-label-${productId}`).innerHTML = cartItem.quantity;
+    }
+  });
+  
+  updateCartQuantity();
+}
+
+document.querySelectorAll('.js-input-quantity')
+  .forEach((input) => {
+    input.addEventListener('keydown', (event) => {
+      
+      if (event.key === 'Enter') {
+        const productId = input.dataset.productId;
+        const container = document.querySelector(`.js-cart-item-container-${productId}`);
+
+        let quantityElem = document.querySelector(`.js-input-quantity-${productId}`).value;
+        
+        const newQuantity = Number(quantityElem);
+
+        if (!cautionAlert(newQuantity)) {
+          return; // Halt further execution if the input is invalid
+        }
+
+        updateQuantity(productId, newQuantity);
+        
+        container.classList.remove('is-editing-quantity')
+      }
+    });
+  });
+
+function cautionAlert(newQuantity) {
+  if (isNaN(newQuantity)) {
+    alert('Please input numbers only')
+    return false;
+  }
+
+  if (!Number.isInteger(newQuantity)) {
+    alert ('Only whole numbers allowed')
+    return false;
+  }
+
+  if (newQuantity < 1 || newQuantity > 999) {
+    alert('Number must be at least 1 and below 1000')
+    return false;
+  }
+
+  return true; // If all checks pass, return true
+}
