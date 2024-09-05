@@ -22,3 +22,28 @@ export function calculateDeliveryDate(deliveryOption) {
   const dateString = deliveryDate.format('dddd, MMMM D')
   return dateString;
 }
+
+export function getDeliveryOption(deliveryOptionId) {
+  let deliveryOption;
+
+  deliveryOptions.forEach((option) => {
+    if (option.id === deliveryOptionId) {
+      deliveryOption = option
+    }
+  });
+
+  return deliveryOption || deliveryOption[0];
+}
+
+export function updateDeliveryOption(productId) {
+  
+  let matchingItem;
+
+  cart.forEach((cartItem) => {
+    if (cartItem.id === productId) {
+      matchingItem = cartItem
+    }
+  })
+  const deliveryOption = matchingItem.deliveryOption
+  return deliveryOption
+}

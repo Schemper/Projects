@@ -1,6 +1,6 @@
 import {products} from '../../data/products.js'
 import { calculateCartQuantity, cart, removeFromCart } from '../../data/cart.js';
-import { calculateDeliveryDate, deliveryOptions } from '../../data/deliveryOption.js';
+import { calculateDeliveryDate, deliveryOptions, getDeliveryOption, updateDeliveryOption } from '../../data/deliveryOption.js';
 import formatCurrency from '../utils/money.js';
 
 export function renderOrderSummary() {
@@ -10,6 +10,10 @@ export function renderOrderSummary() {
     const productId = cartItem.productId
     
     let matchingProduct = '';
+
+    const deliveryOptionId = cartItem.deliveryOptionId
+
+    const deliveryOption = getDeliveryOption(deliveryOptionId);
 
 
     products.forEach((product) => {
@@ -21,7 +25,7 @@ export function renderOrderSummary() {
     cartSummaryHTML += `
       <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
         <div class="delivery-date">
-          Delivery date: Wednesday, June 15
+          Delivery date: ${calculateDeliveryDate(deliveryOption)}
         </div>
 
         <div class="cart-item-details-grid">
@@ -88,7 +92,7 @@ export function renderOrderSummary() {
       const ischecked = deliveryOption.id === cartItem.deliveryOptionId;
 
       html += `
-        <div class="delivery-option"  
+        <div class="delivery-option js-delivery-option"  
         data-product-id="${matchingProduct.id}" 
         data-delivery-option-id="${deliveryOption.id}">
           <input type="radio" 
@@ -221,4 +225,16 @@ export function renderOrderSummary() {
 
     return true; // If all checks pass, return true
   }
+
+  document.querySelectorAll('.js-delivery-option')
+    .forEach((element) => {
+      const productId = dataset.productId
+
+      element.addEventListener('click', () => {
+        updateDeliveryOption(productId)
+        renderOrderSummary();
+      })
+    })
+
+
 }
