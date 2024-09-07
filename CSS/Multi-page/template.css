@@ -85,6 +85,25 @@ main label {
   margin-bottom: 1px;
 }
 
+.input_label {
+  display: flex;
+  justify-content:space-between;
+}
+
+.warning {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 0px;
+  justify-content: end;
+  width: 120px;
+  display: none;
+
+}
+
+.not_added {
+  display: initial;
+}
+
 footer {
   position: fixed;
   width: 375px;

@@ -25,45 +25,16 @@
     
   </header>
 
-  <main>
-    <h2>Personal info</h2>
-    <p>Please provide your name, email address, and phone number.</p>
-
-    <label for="Name">Name</label>
-    <input type="text" id="Name" placeholder="e.g. Stephen King" required>
-
-    <label for="email">
-      Email Address
-    </label>
-    <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
-
-    <label for="phone_number">
-      Phone Number
-    </label>
-    <input type="tel" id="phone number" placeholder="e.g. +1 234 567 890" required>
-      
+  <main class="main_body">
+  
   </main>
 
   <footer>
-    <button class="Next" type="submit" onclick="validateForm();" id="nextStepButton">
+    <button class="Next" type="submit"  id="nextStepButton">
       Next Step
     </button>
   </footer>
-<script>
-
-  function validateForm() {
-    document.querySelector('.nextStepButton').addEventListener('click', function() {
-      const username = document.getElementById('username').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const phone = dpcument.getElementById('phone_number').value.trim();
-
-      if (username === '' || email === '' || phone === '') {
-          alert('Please fill in all required fields.');
-        } else {
-          window.location.href = 'Step_2.html';
-          }
-    })
-  }
+<script src="Script/step_1.js">
  
   /*document.getElementById('nextStepButton').addEventListener('click', function() {
     const username = document.getElementById('username').value.trim();
