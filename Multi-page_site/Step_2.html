@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/CSS/Multi-page/template.css">
   <link rel="stylesheet" href="CSS/header_footer.css">
   <link rel="stylesheet" href="CSS/template.css">
   <link rel="stylesheet" href="CSS/main_section.css">
   <title>Step 2</title>
 </head>
 <body>
-  <nav class="nav_bar"></nav>
+  <nav class="nav_bar" onload="navBar()">
+
+  </nav>
 
   <main>
     <h2>Select your plan</h2>
@@ -63,10 +64,12 @@
     </button>
   </footer>
 
-  <script>
+  <script type="module" src="Script/step_2.js">
     document.querySelector('.duration-switch').addEventListener('click', function() {
       this.classList.toggle('active');
     });
+
+
   </script>
 
 </body>

@@ -1,4 +1,4 @@
-import {navBar} from "./pageNumber.js"
+import {navBar} from "./navBar.js"
 
 navBar();
 
