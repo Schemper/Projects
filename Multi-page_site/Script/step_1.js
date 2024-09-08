@@ -1,3 +1,6 @@
+import {navBar} from "./pageNumber.js"
+
+navBar();
 
 const html = `
   <h2>Personal info</h2>

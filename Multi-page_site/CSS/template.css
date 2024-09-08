@@ -13,34 +13,6 @@ body {
   margin-bottom: 200px;
 }
 
-header {
- width: 100%;
- position: absolute;
- top: 0;
-}
-
-header .page_number {
-  position: absolute;
-  top: 30px;
-  display: flex;
-  width: 150px;
-  justify-content: space-between;
-  align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
-
-}
-
-header button {
-  background-color: transparent;
-  border: 1px solid white;
-  border-radius: 50%;
-  color: white;
-  padding: 5px 8px;
-  font-size: 10px;
-  font-weight: 700;
-  cursor: pointer;
-}
 
 main {
   display: flex;
@@ -104,24 +76,3 @@ main label {
   display: initial;
 }
 
-footer {
-  position: fixed;
-  width: 375px;
-  bottom: 0;
-  height: 50px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-}
-
-footer .Next {
-  background-color: hsl(213, 96%, 18%);
-  border: none;
-  color: hsl(231, 100%, 99%);
-  padding: 7px 10px;
-  border-radius: 3px;
-  font-size: 12px;
-  margin-right: 10px;
-  cursor: pointer;
-}

@@ -4,49 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Step 1</title>
-  <link rel="stylesheet" href="/CSS/Multi-page/template.css">
+  <link rel="stylesheet" href="CSS/header_footer.css">
+  <link rel="stylesheet" href="CSS/template.css">
 </head>
 <body>
-  <header>
-    <img src="/images/Multi-page/bg-sidebar-mobile.svg" alt="">
-
-    <div class="page_number">
-      <button>
-        <a href="Step_1.html">1</a>
-      </button>
-      <button>
-        <a href="Step_2.html">2</a>
-      </button>
-      <button>
-        <a href="Step_3.html">3</a>
-      </button>
-      <button>4</button>
-    </div>
-    
-  </header>
+  <nav class="nav_bar"></nav>
 
   <main class="main_body">
   
   </main>
 
-  <footer>
+  <footer class="footer-page1">
     <button class="Next" type="submit"  id="nextStepButton">
       Next Step
     </button>
   </footer>
-<script src="Script/step_1.js">
- 
-  /*document.getElementById('nextStepButton').addEventListener('click', function() {
-    const username = document.getElementById('username').value.trim();
-    const email = document.getElementById('email').value.trim();
-
-    if (username === '' || email === '') {
-        alert('Please fill in all required fields.');
-    } else {
-        window.location.href = 'Step_2.html';
-    }
-  });*/
-
-</script>
+<script type="module" src="Script/step_1.js"></script>
 </body>
 </html>
