@@ -28,22 +28,9 @@ export function getDeliveryOption(deliveryOptionId) {
 
   deliveryOptions.forEach((option) => {
     if (option.id === deliveryOptionId) {
-      deliveryOption = option
+      deliveryOption = option;
     }
   });
 
   return deliveryOption || deliveryOption[0];
-}
-
-export function updateDeliveryOption(productId) {
-  
-  let matchingItem;
-
-  cart.forEach((cartItem) => {
-    if (cartItem.id === productId) {
-      matchingItem = cartItem
-    }
-  })
-  const deliveryOption = matchingItem.deliveryOption
-  return deliveryOption
 }

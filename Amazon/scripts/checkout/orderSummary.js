@@ -1,6 +1,15 @@
 import {products} from '../../data/products.js'
-import { calculateCartQuantity, cart, removeFromCart } from '../../data/cart.js';
-import { calculateDeliveryDate, deliveryOptions, getDeliveryOption, updateDeliveryOption } from '../../data/deliveryOption.js';
+import { 
+  calculateCartQuantity, 
+  cart, 
+  removeFromCart, 
+  updateDeliveryOption
+} from '../../data/cart.js';
+import { 
+  calculateDeliveryDate, 
+  deliveryOptions, 
+  getDeliveryOption
+} from '../../data/deliveryOption.js';
 import formatCurrency from '../utils/money.js';
 
 export function renderOrderSummary() {
@@ -92,10 +101,11 @@ export function renderOrderSummary() {
       const ischecked = deliveryOption.id === cartItem.deliveryOptionId;
 
       html += `
-        <div class="delivery-option js-delivery-option"  
-        data-product-id="${matchingProduct.id}" 
+        <div class="delivery-option js-delivery-option"
+        data-product-id="${matchingProduct.id}"
         data-delivery-option-id="${deliveryOption.id}">
           <input type="radio" 
+            data-product-id="${matchingProduct.id}" 
             ${ischecked ? 'checked' : ''} 
             class="delivery-option-input"
             name="delivery-option-${matchingProduct.id}">
@@ -228,10 +238,10 @@ export function renderOrderSummary() {
 
   document.querySelectorAll('.js-delivery-option')
     .forEach((element) => {
-      const productId = dataset.productId
-
       element.addEventListener('click', () => {
-        updateDeliveryOption(productId)
+        const {productId, deliveryOptionId} = element.dataset;
+        
+        updateDeliveryOption(productId, deliveryOptionId);
         renderOrderSummary();
       })
     })
