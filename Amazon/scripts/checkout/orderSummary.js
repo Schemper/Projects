@@ -1,4 +1,4 @@
-import {products} from '../../data/products.js'
+import {getProduct} from '../../data/products.js'
 import { 
   calculateCartQuantity, 
   cart, 
@@ -19,18 +19,12 @@ export function renderOrderSummary() {
   cart.forEach((cartItem) => {
     const productId = cartItem.productId
     
-    let matchingProduct = '';
+    let matchingProduct = getProduct(productId);
 
     const deliveryOptionId = cartItem.deliveryOptionId
 
     const deliveryOption = getDeliveryOption(deliveryOptionId);
 
-
-    products.forEach((product) => {
-      if (productId === product.id) {
-        matchingProduct = product;
-      }
-    });
 
     cartSummaryHTML += `
       <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">

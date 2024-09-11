@@ -1,7 +1,6 @@
-import { calculateCartQuantity } from "../../data/cart.js";
-import { cart } from "../../data/cart.js";
-import { deliveryOptions, getDeliveryOption } from "../../data/deliveryOption.js";
-import { products } from "../../data/products.js";
+import { cart, calculateCartQuantity } from "../../data/cart.js";
+import { getDeliveryOption } from "../../data/deliveryOption.js";
+import { getProduct } from "../../data/products.js";
 import formatCurrency from "../utils/money.js";
 
 export function renderPaymentSummary() {
@@ -13,14 +12,7 @@ export function renderPaymentSummary() {
     cart.forEach((cartItem) => {
       
       const productId = cartItem.productId
-      let matchingProduct = '';
-
-      
-      products.forEach((product) => {
-        if (productId === product.id) {
-          matchingProduct = product;
-        }
-      })
+      let matchingProduct = getProduct(productId);
       
 
       let shipping = getDeliveryOption(cartItem.deliveryOptionId).priceCents;
