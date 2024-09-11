@@ -11,6 +11,7 @@ import {
   getDeliveryOption
 } from '../../data/deliveryOption.js';
 import formatCurrency from '../utils/money.js';
+import { renderPaymentSummary } from './paymentSummary.js';
 
 export function renderOrderSummary() {
   let cartSummaryHTML = '';
@@ -136,6 +137,7 @@ export function renderOrderSummary() {
       
       renderOrderSummary();
       updateCartQuantity();
+      renderPaymentSummary();
     })
   });
 
@@ -240,9 +242,10 @@ export function renderOrderSummary() {
     .forEach((element) => {
       element.addEventListener('click', () => {
         const {productId, deliveryOptionId} = element.dataset;
-        
+
         updateDeliveryOption(productId, deliveryOptionId);
         renderOrderSummary();
+        renderPaymentSummary();
       })
     })
 
