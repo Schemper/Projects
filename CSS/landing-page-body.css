@@ -52,7 +52,7 @@ button {
   background-color: hsl(198, 60%, 50%);
   border: none;
   color: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 30px;
   margin-top: 30px;
   cursor: pointer;
@@ -168,11 +168,45 @@ h2 {
   bottom: 850px;
 }
 
+.fifth-section-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .fifth-section input {
   border: none;
-  padding: 20px ;
+  padding: 15px 15px 15px 20px;
   border-radius: 30px;
   margin-top: 30px;
+  width: 250px;
+}
+
+.warning {
+  color: red;
+  font-size: 12px;
+  opacity: 0;
+  text-align: justify;
+  margin-left: 25px;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.wrong_email_format {
+  display: inline-block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.fifth-section button {
+  margin-top: 0px;
+  width: 280px;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -242,15 +276,22 @@ h2 {
     font-size: 12px;
   }
 
+  .fifth-section-input {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
   .fifth-section input {
-    margin-right: 20px;
-    width: 280px;
-    padding: 10px 30px;
+    width: 300px;
+    padding: 10px 25px;
     height: 15px;
   }
   
   .fifth-section button {
     font-size: 12px;
     padding: 10px 20px;
+    margin-top: 15px;
+    width: 180px;
   }
 }

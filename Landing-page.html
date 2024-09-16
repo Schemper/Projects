@@ -46,7 +46,7 @@
           Fylo store all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.
         </p>
 
-        <button>Get Started</button>
+        <button class="get-started-btn">Get Started</button>
       </div>
     </section>
 
@@ -196,12 +196,18 @@
         It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
       </p>
 
-      <div class="fifth-section-input">
-        <input type="email" placeholder="email@example.com">
+      <div class="fifth-section-input js-fifth-section-input">
+        <div class="input-container">
+          <input type="email" id="email" placeholder="email@example.com">
+        
+          <span class="warning">Please enter a valid email address</span>          
+        </div>
 
-        <button>
-          Get Started For Free
-        </button>
+        <div>
+          <button class="js-fifth-section-button">
+            Get Started For Free
+          </button>
+        </div>
       </div>
     </section>
 
@@ -293,6 +299,7 @@
       </div>
     </div>
   </footer>
-
+  
+  <script src="scripts/landing-page.js"></script>
 </body>
 </html>
