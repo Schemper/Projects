@@ -1,6 +1,6 @@
 export function navBar() {
   const html = `
-    <img src="../../images/Multi-page/bg-sidebar-mobile.svg" alt="">
+    <img src="/Projects/images/Multi-page/bg-sidebar-mobile.svg" alt="">
 
     <div class="page_number">
       <a href="Step_1.html">
