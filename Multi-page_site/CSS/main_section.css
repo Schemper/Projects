@@ -1,11 +1,14 @@
 section .container {
  display: flex;
  flex-direction: row;
+ align-items: center;
  padding: 10px;
  border: 1.5px solid hsl(231, 11%, 63%);
  border-radius: 5px;
  margin-bottom: 10px;
 }
+
+
 
 section .container:hover {
   background-color: hsl(228, 100%, 84%);
@@ -14,7 +17,24 @@ section .container:hover {
   cursor: pointer;
 }
 
+input[type="checkbox"] {
+  transform: scale(1.5); /* Adjust the scale as needed */
+  -webkit-transform: scale(1.5); /* Safari support */
+  -moz-transform: scale(1.5);    /* Firefox support */
+  -ms-transform: scale(1.5);     /* IE support */
+  -o-transform: scale(1.5);      /* Opera support */
+}
+
+.container input {
+  margin: 10px;
+}
+
+.plan {
+  width: 75%;
+}
+
 .plan p {
+  width: auto;
   margin: 0;
   line-height: 1.5;
   margin-left: 10px;
@@ -100,3 +120,69 @@ section .container:hover {
  right: 500px;
 }
 
+
+.finishing-up {
+  background-color: hsl(231, 100%, 99%);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  border-radius: 5px;
+}
+
+.finishing-up p {
+  margin: 0;
+  width: auto;
+}
+
+.finishing-up div {
+  padding: 0px 15px; /* Padding only on the left and right */
+  margin-bottom: 15px; /* Keeps a 15px distance between divs */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.arcade-duration div {
+  display: flex;
+  flex-direction: column;
+  padding:  0px;
+  justify-content: center;
+}
+
+.arcade-duration {
+  position: relative; /* Allows for pseudo-elements */
+  font-weight: 600;
+  margin-top: 14px
+}
+
+.arcade-duration a  {
+  font-weight: 300;
+  color: hsl(231, 11%, 63%);
+}
+
+.arcade-duration::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15px; /* Match with parent's padding-left */
+  right: 15px; /* Match with parent's padding-right */
+  border-bottom: solid 1px hsl(231, 11%, 63%);
+}
+
+.total-div  {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.total-div p {
+  display: inline;
+  margin: 0;
+  width: auto;
+}
+
+.total-div span {
+  color: hsl(243, 100%, 62%);
+  font-weight: 600;
+}

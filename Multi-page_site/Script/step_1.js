@@ -33,18 +33,6 @@ document.querySelector('.main_body').innerHTML = html
 const button = document.querySelector('.Next')
 
 button.addEventListener('click', () => {
-  /*const username = document.getElementById('Name').value.trim();
-
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone_number').value.trim();
-
-  const warning = document.querySelector('.warning')
-
-  if (username === '' || email === '' || phone === '') {
-    warning.classList.add('not_added')
-  } else {
-    window.location.href = "Step_2.html";
-  }*/
 
   if (validateForm()) {
     window.location.href = 'Step_2.html';
@@ -81,4 +69,41 @@ function validateForm() {
   })
 
   return !hasWarning;
+}
+
+
+inputs.forEach((input, index) => {
+  if (input.value.trim() === '') {
+    warnings[index].classList.add('not_added');
+    hasWarning = true;
+  } else if (input[1]  ) {
+    warnings[index].classList.remove('not_added');
+  }
+})
+
+
+const warning = [
+  'This field is required',
+   'This is an invalid Input'
+]
+
+function checkInput() {
+  inputs.forEach((input, index) => {
+    if (input.value.trim() === '') {
+      warning[0] 
+    } else {
+      warning[1] 
+    }
+  });
+}
+
+function validateEmail() {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+  if (emailRegex.test(inputs[1].value)) {
+    console.log('valid email')
+  } else {
+    console.log('invalid email')
+  }
 }
