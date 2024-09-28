@@ -28,7 +28,7 @@ button {
   text-decoration: none;
 }
 
-button:hover {
+.nav_bar button:hover {
   background-color: hsl(228, 100%, 84%);
   color: hsl(213, 96%, 18%);
 }
@@ -56,7 +56,7 @@ footer a {
 
 }
 
-footer .Next {
+footer button {
   background-color: hsl(213, 96%, 18%);
   border: none;
   color: hsl(231, 100%, 99%);
@@ -69,4 +69,8 @@ footer .Next {
 
 .footer-page1 {
   justify-content: flex-end;
+}
+
+.confirm {
+  background-color: hsl(243, 100%, 62%);
 }
