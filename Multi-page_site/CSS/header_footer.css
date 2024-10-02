@@ -1,76 +1,38 @@
-nav {
+.nav {
   width: 100%;
-  position: absolute;
-  top: 0;
+  height: 172px;
+  background-image: url('/Multi-page_site/images/bg-sidebar-mobile.svg');
+  margin: 0 auto;
 }
- 
-nav .page_number {
-  position: absolute;
-  top: 30px;
-  display: flex;
-  width: 150px;
-  justify-content: space-between;
-  align-items: center;
-  left: 50%;
-  transform: translateX(-50%);
 
+.nav__list {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  margin: 1.5em 0;
+  padding: 0;
 }
- 
-button {
-  background-color: transparent;
-  border: 1px solid white;
+
+.nav__item {
+  list-style-type: none;
+  margin: 0 0.7em;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  padding: .85rem;
   border-radius: 50%;
-  color: white;
-  padding: 5px 8px;
-  font-size: 10px;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
+  display: inline-flex; /* Allows for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  width: 1.5em; /* Set a fixed width */
+  height: 1.5em; /* Set a fixed height */
+  border: 1px solid;
+  font-size: .8rem;
+  font-weight: 500;
 }
 
-.nav_bar button:hover {
-  background-color: hsl(228, 100%, 84%);
-  color: hsl(213, 96%, 18%);
-}
+.footer {
 
-.active {
-  background-color: hsl(228, 100%, 84%);
-  color: hsl(213, 96%, 18%);
-}
-
-footer {
-  position: fixed;
-  width: 375px;
-  bottom: 0;
-  height: 50px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-footer a {
-  text-decoration: none;
-  color: hsl(231, 11%, 63%);
-  margin-left: 10px;
-
-}
-
-footer button {
-  background-color: hsl(213, 96%, 18%);
-  border: none;
-  color: hsl(231, 100%, 99%);
-  padding: 7px 10px;
-  border-radius: 3px;
-  font-size: 12px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.footer-page1 {
-  justify-content: flex-end;
-}
-
-.confirm {
-  background-color: hsl(243, 100%, 62%);
 }

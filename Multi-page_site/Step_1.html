@@ -9,17 +9,52 @@
   <link rel="stylesheet" href="CSS/Step_1.css">
 </head>
 <body>
-  <nav class="nav_bar"></nav>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="Step_1.html">1</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="Step_2.html">2</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="Step_3.html">3</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="">4</a>
+      </li>
+    </ul>
+  </nav>
 
   <main class="main_body">
+    <h2>Personal info</h2>
+    <p>Please provide your name, email address, and phone number.</p>
+
+    <div class="input_label">
+      <label for="Name">Name</label>
+      <p class="warning">This field is required</p>
+    </div>
+    <input type="text" id="Name" placeholder="e.g. Stephen King" required>
+
+    <div class="input_label">
+      <label for="email">Email Address</label>
+      <p class="warning">This field is required</p>
+    </div>
+    
+    <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
+
+    <div class="input_label">
+      <label for="phone_number">Phone Number</label>
+      <p class="warning">This field is required</p>
+    </div>
+    <input type="tel" id="phone_number" placeholder="e.g. +1 234 567 890" required>
   
   </main>
 
-  <footer class="footer-page1">
-    <button class="Next" type="submit"  id="nextStepButton">
+  <footer class="footer">
+    <button class="footer__button" type="submit"  id="nextStepButton">
       Next Step
     </button>
   </footer>
-<script type="module" src="Script/step_1.js"></script>
 </body>
 </html>
