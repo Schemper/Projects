@@ -1,34 +1,40 @@
-main input {
-  padding: 8px 10px;
-  margin-bottom: 15px;
-  border: 1px solid hsl(229, 24%, 87%);
-  border-radius: 3px;
+.first-page__label-group {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin: 0.1rem;
 }
 
-main input::placeholder {
+.first-page__label {
+  color: hsl(213, 96%, 18%);
+
+}
+
+.first-page__warning {
+  color: hsl(354, 84%, 57%);
+  visibility: hidden;
+}
+
+.first-page__input {
+  padding: 0.3rem 0.625rem;
+  border: 0.0625rem solid hsl(229, 24%, 87%);
+  border-radius: 0.1875rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.8rem;
+  color: hsl(213, 96%, 18%);
+}
+
+.first-page__input::placeholder {
+  font-size: 0.8rem;
   color: hsl(231, 11%, 63%);
 }
 
-main label {
-  font-size: 13px;
-  margin-bottom: 1px;
+.first-page__input:focus {
+  outline: none;
+  border: 0.085rem solid hsl(243, 100%, 62%);
 }
 
-.input_label {
-  display: flex;
-  justify-content:space-between;
-}
-
-.warning {
-  color: red;
-  font-size: 13px;
-  margin-bottom: 0px;
-  justify-content: end;
-  width: 120px;
-  display: none;
-
-}
-
+/*change name to visible later*/
 .not_added {
   display: initial;
 }

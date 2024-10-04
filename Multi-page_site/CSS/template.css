@@ -14,22 +14,20 @@
   margin: 0;
 }
 
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
 body {
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   max-width: 375px;
+  height: 100vh;
   background-color: hsl(206, 94%, 87%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  justify-content: space-between;
+  
 }
 
 /*
@@ -61,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-main {
+.main {
   max-width: 20rem;
   display: flex;
   flex-direction: column;
@@ -70,4 +68,15 @@ main {
   top: 100px;
   padding: 1.5rem;
   border-radius: 3%;
+}
+
+.main__header {
+  color: hsl(213, 96%, 18%);
+  font-size: 1.4rem;
+}
+
+.main__desc {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
 }

@@ -1,6 +1,6 @@
 .nav {
   width: 100%;
-  height: 172px;
+  height: 160px;
   background-image: url('/Multi-page_site/images/bg-sidebar-mobile.svg');
   margin: 0 auto;
 }
@@ -34,5 +34,28 @@
 }
 
 .footer {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+  
+}
 
+.footer__nav {
+  justify-content: space-between;
+  display: flex;
+}
+
+.footer__link--hidden {
+  visibility: hidden;
+}
+
+.footer__button {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(213, 96%, 18%);
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.755em;
+  padding: 0.5em 1em;
+  cursor: pointer;
 }
