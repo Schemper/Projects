@@ -11,70 +11,66 @@
 </head>
 <body>
 
-  <header></header>
-    <img src="/images/Multi-page/bg-sidebar-mobile.svg" alt="">
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="Step_1.html">1</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="Step_2.html">2</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="Step_3.html">3</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="Step_4.html">4</a>
+      </li>
+    </ul>
+  </nav>
 
-    <nav class="nav_bar">
-      <button>
-        <a href="Step_1.html">1</a>
-      </button>
-      <button>
-        <a href="Step_2.html">2</a>
-      </button>
-      <button>
-        <a href="Step_3.html">3</a>
-      </button>
-      <button>
-        <a href="Step_4.html">4</a>
-      </button>
-    </nav>
-  </header>
-
-  <main>
-    <h2>
+  <main class="main">
+    <h1 class="main__header">
       Finishing up
-    </h2>
-    <p>
+    </h1>
+    <p class="main__desc">
       Double-check everything looks OK before confirming.
     </p>
 
-    <div class="finishing-up">
-      <div class="arcade-duration">
-        <div>
+    <div class="summary">
+      <div class="summary__block summary__duration">
+        <div class="summary__duration--layout">
           
           Arcade (Monthly)
           
-          <a href="">
+          <a class="summary__duration-change" href="">
             Change
           </a>
         </div>
           
-        <div>$9/mo</div>
+        <div class="summary__duration--layout summary__duration-price">$9/mo</div>
       </div>
-      <div>
-        <p>Online service</p>
-        <span>+$1/mo</span>
+      <div class="summary__block">
+        <p class="summary__desc">Online service</p>
+        <span class="summary__additional-fee">+$1/mo</span>
       </div>
-      <div>
-        <p>Larger storage</p>
-        <span>+$2/mo</span>
+      <div class="summary__block">
+        <p class="summary__desc">Larger storage</p>
+        <span class="summary__additional-fee">+$2/mo</span>
       </div>
     </div>
-    <div class="total-div">
-      <p>Total (per-month)</p>
-      <span>+$12/mo</span>
+    <div class="summary__total-card">
+      <p class="summary__desc summary__total-desc">Total (per-month)</p>
+      <span class="summary__total">+$12/mo</span>
     </div>
   </main>
 
-  <footer id="footer">
-
-    <a href="Step_3.html">
-      Go Back
-    </a>
-
-    <button class="confirm">
-      Confirm
-    </button>
+  <footer class="footer">
+    <nav class="footer__nav">
+      <a class="footer__link footer__link--hidden" href="">Go Back</a>
+      <button class="footer__button" type="submit"  id="nextStepButton">
+        Next Step
+      </button>
+    </nav>
   </footer>
 </body>
 </html>

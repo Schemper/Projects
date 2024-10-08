@@ -1,4 +1,4 @@
-.finishing-up {
+.summary {
   background-color: hsl(217, 100%, 97%);
   display: flex;
   flex-direction: column;
@@ -6,12 +6,8 @@
   border-radius: 5px;
 }
 
-.finishing-up p {
-  margin: 0;
-  width: auto;
-}
 
-.finishing-up div {
+.summary__block {
   padding: 0px 15px; /* Padding only on the left and right */
   margin-bottom: 15px; /* Keeps a 15px distance between divs */
   display: flex;
@@ -20,25 +16,26 @@
 }
 
 
-.arcade-duration div {
+.summary__duration--layout {
   display: flex;
   flex-direction: column;
   padding:  0px;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
-.arcade-duration {
+.summary__duration {
   position: relative; /* Allows for pseudo-elements */
   font-weight: 600;
   margin-top: 14px
 }
 
-.arcade-duration a  {
+.summary__duration-change {
   font-weight: 300;
   color: hsl(231, 11%, 63%);
 }
 
-.arcade-duration::after {
+.summary__duration::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -47,19 +44,27 @@
   border-bottom: solid 1px hsl(231, 11%, 63%);
 }
 
-.total-div  {
+.summary__desc {
+  color: hsl(231, 11%, 63%);
+}
+
+.summary__additional-fee {
+  color: hsl(213, 96%, 18%);
+}
+
+.summary__total-card {
   display: flex;
   justify-content: space-between;
   padding: 15px;
 }
 
-.total-div p {
+.summary__total-desc {
   display: inline;
   margin: 0;
   width: auto;
 }
 
-.total-div span {
+.summary__total {
   color: hsl(243, 100%, 62%);
   font-weight: 600;
 }

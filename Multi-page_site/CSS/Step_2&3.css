@@ -23,6 +23,7 @@
 
 .section__level {
   color: inherit;
+  font-size: 0.9rem;
   font-weight: 700;
   color: hsl(213, 96%, 18%);
 }
@@ -61,10 +62,6 @@
   margin: 0;
 }
 
-.monthly__button {
-
-}
-
 .duration__switch {
   display: flex;
   background-color: hsl(213, 96%, 18%);
@@ -92,9 +89,18 @@
 }
 
 input[type="checkbox"] {
-  transform: scale(1.5); /* Adjust the scale as needed */
-  -webkit-transform: scale(1.5); /* Safari support */
-  -moz-transform: scale(1.5);    /* Firefox support */
-  -ms-transform: scale(1.5);     /* IE support */
-  -o-transform: scale(1.5);      /* Opera support */
+  transform: scale(1.2); /*Adjust the scale as needed*/
+  -webkit-transform: scale(1.2); /*Safari support*/  -moz-transform: scale(1.2);    /*Firefox support*/
+  -ms-transform: scale(1.2);     /*IE support*/
+  -o-transform: scale(1.2);      /*Opera support*/
+}
+
+.section__desc {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.8rem;
+}
+
+.section__extra-fee {
+  color: hsl(243, 100%, 62%);
+  font-size: .9rem;
 }
