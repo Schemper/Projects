@@ -9,68 +9,78 @@
   <title>Step 2</title>
 </head>
 <body>
-  <nav class="nav_bar" onload="navBar()">
+  <nav class="nav">
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a class="nav__link" href="Step_1.html">1</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="Step_2.html">2</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="Step_3.html">3</a>
+      </li>
+      <li class="nav__item">
+        <a class="nav__link" href="">4</a>
+      </li>
+    </ul>
+  </nav>
 
   </nav>
 
-  <main>
-    <h2>Select your plan</h2>
-    <p>You have the option of monthly or yearly billing.</p>
+  <main class="main">
+    <h1 class="main__header">Select your plan</h1>
+    <p class="main__desc">You have the option of monthly or yearly billing.</p>
 
-    <section>
-      <div class="container">
+    <section class="section">
+      <div class="section__container">
         <div>
-          <img src="images/icon-arcade.svg" alt="">
+          <img class="section__img" src="images/icon-arcade.svg" alt="">
         </div>
-        <div class="plan">
-          <p class="level">Arcade</p>
-          <p class="fee">$9/mo</p>
+        <div class="section__plan-div">
+          <p class="section__level">Arcade</p>
+          <p class="section__fee">$9/mo</p>
         </div>
       </div>
-      <div class="container">
+      <div class="section__container">
         <div>
-          <img src="images/icon-advanced.svg" alt="">
+          <img class="section__img" src="images/icon-advanced.svg" alt="">
         </div>
-        <div class="plan">
-          <p class="level">Advanced</p>
-          <p class="fee">$12/mo</p>
+        <div class="section__plan-div">
+          <p class="section__level">Advanced</p>
+          <p class="section__fee">$12/mo</p>
         </div>
       </div>
-      <div class="container">
+      <div class="section__container">
         <div>
-          <img src="images/icon-pro.svg" alt="">
+          <img class="section__img" src="images/icon-pro.svg" alt="">
         </div>
-        <div class="plan">
-          <p class="level">Pro</p>
-          <p class="fee">$15/mo</p>
+        <div class="section__plan-div">
+          <p class="section__level">Pro</p>
+          <p class="section__fee">$15/mo</p>
         </div>
       </div>
+
     </section>
 
 
-    <div class="duration-switch">
-      <p>Monthly</p> 
-      <div>
-        <div class="white"></div>
+    <div class="duration">
+      <button class="duration__button duration__button--active">Monthly</button> 
+      <div class="duration__switch">
+        <div class="switch__white"></div>
       </div>
-      <p>Yearly</p>
+      <button class="duration__button">Yearly</button>
     </div>
   </main>
 
-  <footer id="footer">
-    <a href="Step_1.html">Go Back</a>
-    <button class="Next">
-      Next Step
-    </button>
+  <footer class="footer">
+    <nav class="footer__nav">
+      <a class="footer__link footer__link--hidden" href="">Go Back</a>
+      <button class="footer__button" type="submit"  id="nextStepButton">
+        Next Step
+      </button>
+    </nav>
   </footer>
-
-  <script type="module" src="Script/step_2.js">
-    document.querySelector('.duration-switch').addEventListener('click', function() {
-      this.classList.toggle('active');
-    });
-
-
-  </script>
 
 </body>
 </html>

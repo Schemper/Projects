@@ -3,54 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form with JavaScript Navigation</title>
+    <title>Move Circle Left and Right</title>
     <style>
-        .error {
-            color: red;
-            display: none;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Rectangle container */
+        .container {
+            width: 30px; /* Narrow rectangle */
+            height: 20px; /* 12px height */
+            background-color: lightgray;
+            border-radius: 10px; /* Rounded corners to match height/2 */
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Movable Circle */
+        .circle {
+            width: 12px; /* Circle should fit the height */
+            height: 12px;
+            border-radius: 50%;
+            background-color: hsl(243, 100%, 62%);
+            position: absolute;
+            left: 0; /* Start position: left end */
+            transition: left 0.3s ease; /* Smooth transition */
         }
     </style>
 </head>
 <body>
-    <form id="customForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-        <span class="error" id="usernameError">Username is required.</span>
-        <br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <span class="error" id="emailError">Email is required.</span>
-        <br><br>
-
-        <button type="button" id="nextStepButton">Next Step</button>
-    </form>
+    <!-- Rectangle container with the circle inside -->
+    <div class="container" id="container">
+        <div class="circle" id="circle"></div>
+    </div>
 
     <script>
-        document.getElementById('nextStepButton').addEventListener('click', function(event) {
-            let isValid = true;
+        // Get references to the container and the circle
+        const container = document.getElementById('container');
+        const circle = document.getElementById('circle');
 
-            const username = document.getElementById('username');
-            const email = document.getElementById('email');
-            const usernameError = document.getElementById('usernameError');
-            const emailError = document.getElementById('emailError');
+        // Calculate left and right positions for the circle based on the container
+        const leftPosition = 0; // Left end position
+        const rightPosition = container.clientWidth - circle.clientWidth; // Right end position
 
-            if (username.value.trim() === '') {
-                usernameError.style.display = 'inline';
-                isValid = false;
+        // Add click event listener to the container
+        container.addEventListener('click', (e) => {
+            // Determine whether to move left or right based on click position
+            const containerRect = container.getBoundingClientRect();
+            const clickPosition = e.clientX - containerRect.left;
+
+            // If clicked on the left half, move circle to left end; else move to right end
+            if (clickPosition < containerRect.width / 2) {
+                circle.style.left = `${leftPosition}px`; // Move to left end
             } else {
-                usernameError.style.display = 'none';
-            }
-
-            if (email.value.trim() === '') {
-                emailError.style.display = 'inline';
-                isValid = false;
-            } else {
-                emailError.style.display = 'none';
-            }
-
-            if (isValid) {
-                window.location.href = 'Step_1.html';
+                circle.style.left = `${rightPosition}px`; // Move to right end
             }
         });
     </script>
