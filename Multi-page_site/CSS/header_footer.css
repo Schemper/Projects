@@ -39,6 +39,7 @@
   padding: 1rem;
   position: relative; 
   margin-top: 10%;
+  flex-shrink: 0;
 }
 
 .footer__nav {

@@ -9,55 +9,60 @@
   <link rel="stylesheet" href="CSS/Step_1.css">
 </head> 
 <body>
-  <nav class="nav">
-    <ul class="nav__list">
-      <li class="nav__item">
-        <a class="nav__link" href="Step_1.html">1</a>
-      </li>
-      <li class="nav__item">
-        <a class="nav__link" href="Step_2.html">2</a>
-      </li>
-      <li class="nav__item">
-        <a class="nav__link" href="Step_3.html">3</a>
-      </li>
-      <li class="nav__item">
-        <a class="nav__link" href="Step_4.html">4</a>
-      </li>
-    </ul>
-  </nav>
 
-  <main class="main first-page">
-    <h1 class="main__header">Personal info</h1>
-    <p class="main__desc">Please provide your name, email address, and phone number.</p>
-
-    <div class="first-page__label-group">
-      <label class="first-page__label" for="Name">Name</label>
-      <span class="first-page__warning">This field is required</span>
-    </div>
-    <input class="first-page__input first-page__input--warning" type="text" id="Name" placeholder="e.g. Stephen King" required>
-
-    <div class="first-page__label-group">
-      <label class="first-page__label" for="email">Email Address</label>
-      <span class="first-page__warning">This field is required</span>
-    </div>
-    
-    <input class="first-page__input" type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
-
-    <div class="first-page__label-group">
-      <label class="first-page__label" for="phone_number">Phone Number</label>
-      <span class="first-page__warning">This field is required</span>
-    </div>
-    <input class="first-page__input" type="tel" id="phone_number" placeholder="e.g. +1 234 567 890" required>
-  
-  </main>
-
-  <footer class="footer">
-    <nav class="footer__nav">
-      <a class="footer__link footer__link--hidden" href="">Go Back</a>
-      <button class="footer__button" type="submit"  id="nextStepButton">
-        Next Step
-      </button>
+  <div class="layout layout--responsive">
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="Step_1.html">1</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="Step_2.html">2</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="Step_3.html">3</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="Step_4.html">4</a>
+        </li>
+      </ul>
     </nav>
-  </footer>
+
+    <div class="layout__form">
+      <main class="main first-page">
+        <h1 class="main__header">Personal info</h1>
+        <p class="main__desc">Please provide your name, email address, and phone number.</p>
+
+        <div class="first-page__label-group">
+          <label class="first-page__label" for="Name">Name</label>
+          <span class="first-page__warning">This field is required</span>
+        </div>
+        <input class="first-page__input first-page__input--warning" type="text" id="Name" placeholder="e.g. Stephen King" required>
+
+        <div class="first-page__label-group">
+          <label class="first-page__label" for="email">Email Address</label>
+          <span class="first-page__warning">This field is required</span>
+        </div>
+        
+        <input class="first-page__input" type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
+
+        <div class="first-page__label-group">
+          <label class="first-page__label" for="phone_number">Phone Number</label>
+          <span class="first-page__warning">This field is required</span>
+        </div>
+        <input class="first-page__input" type="tel" id="phone_number" placeholder="e.g. +1 234 567 890" required>
+      
+      </main>
+    </div>
+
+    <footer class="footer">
+      <nav class="footer__nav">
+        <a class="footer__link footer__link--hidden" href="">Go Back</a>
+        <button class="footer__button" type="submit"  id="nextStepButton">
+          Next Step
+        </button>
+      </nav>
+    </footer>
+  </div>
 </body>
 </html>
