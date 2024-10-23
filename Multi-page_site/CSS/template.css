@@ -18,7 +18,11 @@ body {
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: hsl(206, 94%, 87%);  
+  background-color: hsl(206, 94%, 87%);
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*
@@ -50,7 +54,7 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-.layout {
+.page {
   max-width: 375px;
   min-height: 100dvh;
   display: flex;
@@ -63,7 +67,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .layout__form {
-  
   width: 100%;
   height: auto;
   position: absolute;
@@ -76,8 +79,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .main {
-  max-width: 20.5rem;
-  min-width: 20rem;
+  max-width: 80%;
+  min-width: 21rem;
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);
@@ -95,13 +98,37 @@ p, h1, h2, h3, h4, h5, h6 {
   color: hsl(231, 11%, 63%);
   font-size: 0.95rem;
   margin-bottom: 1rem;
+  max-width: 17rem;
 }
 
-@media (min-width: 1200px) {
-  .layout--responsive {
+@media (min-width: 1000px) {
+  .page--responsive {
     min-width: 70%;
-    height: 70%;
+    min-height: 80dvh;
     background-color: white;
     display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 0.65rem;
+    border-radius: 1.5%;
+    margin: auto;
   }
+
+  .layout__form {
+    grid-row: 1;
+    grid-column: 2;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .main {
+    min-width: 80%;
+  }
+
+  .main__desc {
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+ 
 }

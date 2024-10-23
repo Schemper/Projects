@@ -15,20 +15,20 @@
   cursor: pointer;
 }
 
-.section__plan-div {
+.container__plan-div {
   width: 75%;
   margin-left: 0.62rem;
   line-height: 1.5;
 }
 
-.section__level {
+.container__level {
   color: inherit;
   font-size: 0.9rem;
   font-weight: 700;
   color: hsl(213, 96%, 18%);
 }
 
-.section__fee {
+.container__fee {
   font-size: 0.85rem;
   color: hsl(231, 11%, 63%);
 }
@@ -103,4 +103,33 @@ input[type="checkbox"] {
 .section__extra-fee {
   color: hsl(243, 100%, 62%);
   font-size: .9rem;
+}
+
+@media (min-width: 1000px) {
+  .step2--responsive {
+    display: flex;
+    gap: 4%;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .section__container {
+    gap: 3%;
+  } 
+
+  .step2__container--responsive {
+    flex-direction: column;
+    flex: 1;
+    align-items: self-start;
+    gap: 3rem;
+  }
+
+  .step3--responsive {
+    padding: 0.8rem 1rem;
+  }
+
+  .container__plan-div {
+    width: 100%;
+    margin-left: 0;
+  }
 }

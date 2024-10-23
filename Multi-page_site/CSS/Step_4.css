@@ -36,6 +36,10 @@
   color: hsl(231, 11%, 63%);
 }
 
+.summary__duration-change:hover {
+  color: hsl(243, 100%, 62%);;
+}
+
 .summary__duration::after {
   content: '';
   position: absolute;
@@ -93,6 +97,12 @@
 }
 
 .final-page__last-word {
-  width: 90%;
+  width: 80%;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 1000px) {
+  .final-page {
+    margin-top: 7%;
+  }
 }

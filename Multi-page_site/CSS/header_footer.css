@@ -1,11 +1,11 @@
-.nav {
+.steps {
   width: 375px;
   height: 160px;
   background-image: url('../images/bg-sidebar-mobile.svg');
   margin: 0 auto;
 }
 
-.nav__list {
+.steps__list {
   display: flex;
   text-decoration: none;
   justify-content: center;
@@ -13,12 +13,15 @@
   padding: 0;
 }
 
-.nav__item {
+.steps__item {
   list-style-type: none;
   margin: 0 0.7em;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
 }
 
-.nav__link {
+.steps__link {
   text-decoration: none;
   color: hsl(0, 0%, 100%);
   padding: .85rem;
@@ -33,6 +36,27 @@
   font-weight: 500;
 }
 
+.step-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-text {
+  text-transform: uppercase;
+  display: none;
+}
+
+.step-text--number {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.5rem;
+}
+
+.step-text--desc {
+  color: hsl(0, 0%, 100%);
+  font-size: x-small;
+  font-weight: 500;
+}
+
 .footer {
   background-color: hsl(0, 0%, 100%);
   width: 100%;
@@ -40,6 +64,7 @@
   position: relative; 
   margin-top: 10%;
   flex-shrink: 0;
+  justify-self: center;
 }
 
 .footer__nav {
@@ -59,4 +84,57 @@
   font-size: 0.755em;
   padding: 0.5em 1em;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.footer__button:hover {
+  opacity: 0.5;
+}
+
+.footer__button--confirm {
+  background-color: hsl(243, 100%, 62%);
+}
+
+@media (min-width: 1000px) {
+  .steps {
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg-sidebar-desktop.svg');
+    grid-row: 1/3;
+    grid-column: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+  }
+
+  .steps__list {
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: center;
+    margin: 1.5em 0;
+    padding: 0;
+    width: auto;
+    height: 45%;
+    justify-content: space-between;
+  }
+
+  .steps__link {
+    padding: 0.7rem;
+    width: 1em; /* Set a fixed width */
+    height: 1em; /* Set a fixed height */
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+
+  .step-text {
+    display: initial;
+  }
+  
+
+  .footer {
+    grid-row: 2;
+    grid-column: 2;
+    width: 80%;
+    margin-top: 7%;
+  }
 }
