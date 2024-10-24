@@ -7,7 +7,6 @@
 
 .first-page__label {
   color: hsl(213, 96%, 18%);
-
 }
 
 .first-page__warning {
@@ -35,6 +34,6 @@
 }
 
 /*change name to visible later*/
-.not_added {
-  display: initial;
+.empty_field {
+  visibility: initial;
 }

@@ -36,6 +36,12 @@
   font-weight: 500;
 }
 
+.active__page {
+  color: hsl(213, 96%, 18%);
+  background-color: hsl(206, 94%, 87%);
+  border: none;
+}
+
 .step-info {
   display: flex;
   flex-direction: column;
@@ -72,8 +78,14 @@
   display: flex;
 }
 
-.footer__link--hidden {
+.footer__link {
+  color: hsl(231, 11%, 63%);
+  text-decoration: none;
   visibility: hidden;
+}
+
+.footer__link--visible {
+  visibility: visible;
 }
 
 .footer__button {

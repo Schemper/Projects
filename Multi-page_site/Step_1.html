@@ -11,76 +11,18 @@
 <body>
 
   <div class="page page--responsive">
-    <nav class="steps">
-      <ul class="steps__list">
-        <li class="steps__item">
-          <a class="steps__link" href="Step_1.html">1</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 1</span>
-            <span class="step-text step-text--desc">Your Info</span>
-          </div>
-        </li>
-        <li class="steps__item">
-          <a class="steps__link" href="Step_2.html">2</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 2</span>
-            <span class="step-text step-text--desc">Select Plan</span>
-          </div>
-        </li>
-        <li class="steps__item">
-          <a class="steps__link" href="Step_3.html">3</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 3</span>
-            <span class="step-text step-text--desc">Add-Ons</span>
-          </div>
-        </li>
-        <li class="steps__item">
-          <a class="steps__link" href="Step_4.html">4</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 4</span>
-            <span class="step-text step-text--desc">Summary</span>
-          </div>
-        </li>
-      </ul>
-    </nav>
+    <nav class="steps js-steps"></nav>
 
 
 
     <div class="layout__form">
-      <main class="main first-page">
-        <h1 class="main__header">Personal info</h1>
-        <p class="main__desc">Please provide your name, email address, and phone number.</p>
-
-        <div class="first-page__label-group">
-          <label class="first-page__label" for="Name">Name</label>
-          <span class="first-page__warning">This field is required</span>
-        </div>
-        <input class="first-page__input first-page__input--warning" type="text" id="Name" placeholder="e.g. Stephen King" required>
-
-        <div class="first-page__label-group">
-          <label class="first-page__label" for="email">Email Address</label>
-          <span class="first-page__warning">This field is required</span>
-        </div>
-        
-        <input class="first-page__input" type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
-
-        <div class="first-page__label-group">
-          <label class="first-page__label" for="phone_number">Phone Number</label>
-          <span class="first-page__warning">This field is required</span>
-        </div>
-        <input class="first-page__input" type="tel" id="phone_number" placeholder="e.g. +1 234 567 890" required>
-      
-      </main>
+      <main class="main first-page js-first-page"></main>
     </div>
 
-    <footer class="footer">
-      <nav class="footer__nav">
-        <a class="footer__link footer__link--hidden" href="">Go Back</a>
-        <button class="footer__button" type="submit"  id="nextStepButton">
-          Next Step
-        </button>
-      </nav>
+    <footer class="footer js-footer">
     </footer>
   </div>
+
+  <script type="module" src="Script/step_1.js"></script>
 </body>
 </html>
