@@ -11,7 +11,6 @@
 
 .first-page__warning {
   color: hsl(354, 84%, 57%);
-  visibility: hidden;
 }
 
 .first-page__input {
@@ -33,7 +32,3 @@
   border: 0.085rem solid hsl(243, 100%, 62%);
 }
 
-/*change name to visible later*/
-.empty_field {
-  visibility: initial;
-}
