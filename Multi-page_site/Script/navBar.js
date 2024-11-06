@@ -84,6 +84,7 @@ function footerNav() {
       if (currentPageIndex > 0) {
         currentPageIndex--;
         window.location.href = steps[currentPageIndex];
+        getFromStorage();
       }
       
     });

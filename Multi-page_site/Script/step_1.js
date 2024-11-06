@@ -26,9 +26,10 @@ const html = `
   </div>
   <input class="first-page__input" type="tel" id="phone_number" placeholder="e.g. +1 234 567 890" required> 
 `
+  document.querySelector('.js-first-page').innerHTML = html;
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.js-first-page').innerHTML = html;
+  
 
   const button = document.querySelector('.footer__button');
   getFromStorage();
