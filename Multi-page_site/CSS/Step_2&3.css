@@ -6,13 +6,13 @@
   border: 0.09375rem solid hsl(231, 11%, 63%);
   border-radius: 0.312rem;
   margin-bottom: 0.62rem;
+  cursor: pointer;
 } 
- 
-.section__container:hover {
+
+.active {
   background-color: hsl(228, 100%, 84%);
   border: 0.085rem solid hsl(243, 100%, 62%);
   border-radius: 0.312rem;
-  cursor: pointer;
 }
 
 .container__plan-div {
@@ -80,7 +80,7 @@
   background-color: white;
   position: absolute;
   left: 4px; /* Start position */
-  transition: left 0.03s; /* Smooth transition */
+  transition: left 0.3s ease; /* Smooth transition */
 }
 
 .duration__button--active {

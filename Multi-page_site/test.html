@@ -16,7 +16,7 @@
 
         /* Rectangle container */
         .container {
-            width: 30px; /* Narrow rectangle */
+            width: 40px; /* Narrow rectangle */
             height: 20px; /* 12px height */
             background-color: lightgray;
             border-radius: 10px; /* Rounded corners to match height/2 */
@@ -33,7 +33,7 @@
             border-radius: 50%;
             background-color: hsl(243, 100%, 62%);
             position: absolute;
-            left: 0; /* Start position: left end */
+            left: 5px; /* Start position: left end */
             transition: left 0.3s ease; /* Smooth transition */
         }
     </style>
@@ -49,9 +49,13 @@
         const container = document.getElementById('container');
         const circle = document.getElementById('circle');
 
+        // Define the padding values for left and right
+        const leftPadding = 5; // Padding for the left
+        const rightPadding = 5; // Padding for the right
+
         // Calculate left and right positions for the circle based on the container
-        const leftPosition = 0; // Left end position
-        const rightPosition = container.clientWidth - circle.clientWidth; // Right end position
+        const leftPosition = leftPadding; // Left end position
+        const rightPosition = container.clientWidth - circle.clientWidth - leftPadding; // Right end position
 
         // Add click event listener to the container
         container.addEventListener('click', (e) => {
