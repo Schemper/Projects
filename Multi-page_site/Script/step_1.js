@@ -26,19 +26,25 @@ const html = `
   </div>
   <input class="first-page__input" type="tel" id="phone_number" placeholder="e.g. +1 234 567 890" required> 
 `
-  document.querySelector('.js-first-page').innerHTML = html;
+document.querySelector('.js-first-page').innerHTML = html;
 
 document.addEventListener('DOMContentLoaded', () => {
   
+  const userInput = getFromStorage();
+
+  if (userInput) {
+    document.getElementById('Name').value = userInput.name || '';
+    document.getElementById('email').value = userInput.email || '';
+    document.getElementById('phone_number').value = userInput.phone || '';
+  }
 
   const button = document.querySelector('.footer__button');
-  getFromStorage();
 
   if (button) { // Check if the button exists
     button.addEventListener('click', () => {
       if (validateForm()) {
-        window.location.href = 'Step_2.html';
         saveToStorage();
+        window.location.href = 'Step_2.html';
       }
     });
   }
