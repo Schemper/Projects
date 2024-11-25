@@ -11,94 +11,18 @@
 <body>
   
   <div class="page page--responsive">
-    <nav class="steps">
-      <ul class="steps__list">
-        <li class="steps__item">
-          <a class="steps__link" href="Step_1.html">1</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 1</span>
-            <span class="step-text step-text--desc">Your Info</span>
-          </div>
-        </li>
-        <li class="steps__item">
-          <a class="steps__link" href="Step_2.html">2</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 2</span>
-            <span class="step-text step-text--desc">Select Plan</span>
-          </div>
-        </li>
-        <li class="steps__item">
-          <a class="steps__link" href="Step_3.html">3</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 3</span>
-            <span class="step-text step-text--desc">Add-Ons</span>
-          </div>
-        </li>
-        <li class="steps__item">
-          <a class="steps__link" href="Step_4.html">4</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 4</span>
-            <span class="step-text step-text--desc">Summary</span>
-          </div>
-        </li>
-      </ul>
-    </nav>
+    <nav class="steps js-steps"></nav>
 
     <div class="layout__form">
-      <main class="main">
-        <h1 class="main__header">Pick add-ons</h1>
-        <p class="main__desc">Add-ons help enhance your gaming experience.</p>
-
-        <section class="section">
-          <div class="section__container step3--responsive">
-            <div>
-              <input type="checkbox">
-            </div>
-            <div class="container__plan-div">
-              <p class="container__level">Online service</p>
-              <p class="section__desc">Access to multiplayer games</p>
-            </div>
-            <div class="section__extra-fee">
-              +$1/mo
-            </div>
-          </div>
-          <div class="section__container step3--responsive">
-            <div>
-              <input type="checkbox">
-            </div>
-            <div class="container__plan-div">
-              <p class="container__level">Larger storage</p>
-              <p class="section__desc">Extra 1TB of cloud save</p>
-            </div>
-            <div class="section__extra-fee">
-              +$2/mo
-            </div>
-          </div>
-          <div class="section__container step3--responsive">
-            <div class="checkbox-div">
-              <input type="checkbox">
-            </div>
-            <div class="container__plan-div">
-              <p class="container__level">Customizable profile</p>
-              <p class="section__desc">Custom theme on your profile</p>
-            </div>
-            <div class="section__extra-fee">
-              +$2/mo
-            </div>
-          </div>
-        </section>
+      <main class="main js-main">
+        
 
       </main>
     </div>
 
-    <footer class="footer">
-      <nav class="footer__nav">
-        <a class="footer__link footer__link--hidden" href="">Go Back</a>
-        <button class="footer__button" type="submit"  id="nextStepButton">
-          Next Step
-        </button>
-      </nav>
-    </footer>
+    <footer class="footer js-footer"></footer>
   </div>
+
+  <script type="module" src="Script/step_3.js"></script>
 </body>
 </html>

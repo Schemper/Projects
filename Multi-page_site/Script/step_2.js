@@ -137,7 +137,7 @@ function savePlan() {
 function initializePage() {
   renderPage();
 
-   const { selectedPlan } = getFromStorage() || {};
+  const { selectedPlan } = getFromStorage() || {};
   const storedPlan = selectedPlan || { duration: "monthly" };
   const duration = storedPlan.duration || "monthly";
 
