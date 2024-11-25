@@ -1,4 +1,5 @@
 import { renderNavBars } from "./navBar.js";
+import { addOns } from "./data.js";
 
 renderNavBars();
 
@@ -8,7 +9,7 @@ function renderPage() {
   <h1 class="main__header">Pick add-ons</h1>
   <p class="main__desc">Add-ons help enhance your gaming experience.</p>
 
-  <section class="section">
+  <section class="section js-section">
     <div class="section__container step3--responsive">
       <div>
         <input type="checkbox">
@@ -50,7 +51,6 @@ function renderPage() {
 
   document.querySelector('.js-main').innerHTML = html;
 }
-
 
 
 

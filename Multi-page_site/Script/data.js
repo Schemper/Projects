@@ -24,3 +24,36 @@ export const plans = {
 
 
 export let selectedPlan = {};
+
+export const addOns = [
+  {
+    id: 1,
+    name: "Online service",
+    desc: "Access to multiplayer games",
+    billing: {
+      monthly: { fee: 1, cycle: "/mo" },
+      yearly: { fee: 10, cycle: "/yr" },
+    },
+    selected: false // To track if the checkbox is checked
+  },
+  {
+    id: 2,
+    name: "Larger storage",
+    desc: "Extra 1TB of cloud save",
+    billing: {
+      monthly: { fee: 2, cycle: "/mo" },
+      yearly: { fee: 20, cycle: "/yr" },
+    },
+    selected: false
+  },
+  {
+    id: 3,
+    name: "Customizable profile",
+    desc: "Custom theme on your profile",
+    billing: {
+      monthly: { fee: 2, cycle: "/mo" },
+      yearly: { fee: 20, cycle: "/yr" },
+    },
+    selected: false
+  }
+];
