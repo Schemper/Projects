@@ -33,10 +33,14 @@
   color: hsl(231, 11%, 63%);
 }
 
-.section__discount {
+.container__discount {
   font-size: 0.8rem;
   color: hsl(213, 96%, 18%);
   font-weight: 500;
+}
+
+.container__discount--hidden {
+  display: none;
 }
 
 .duration {

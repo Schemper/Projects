@@ -1,5 +1,5 @@
 import {renderNavBars} from "./navBar.js"
-import saveToStorage, { getFromStorage } from "./sessionStorage.js";
+import { getFromStorage, saveUserInput } from "./sessionStorage.js";
 
 renderNavBars();
 
@@ -30,7 +30,7 @@ document.querySelector('.js-first-page').innerHTML = html;
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  const userInput = getFromStorage();
+  const {userInput} = getFromStorage();
 
   if (userInput) {
     document.getElementById('Name').value = userInput.name || '';
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (button) { // Check if the button exists
     button.addEventListener('click', () => {
       if (validateForm()) {
-        saveToStorage();
+        saveUserInput();
         window.location.href = 'Step_2.html';
       }
     });
