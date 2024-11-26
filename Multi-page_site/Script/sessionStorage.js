@@ -8,7 +8,7 @@ export function getFromStorage() {
 
 
 export function saveToStorage(selectedPlan) {  
-  sessionStorage.setItem('selectedPlan', JSON.stringify({selectedPlan}));
+  sessionStorage.setItem('selectedPlan', JSON.stringify(selectedPlan));
 }
 
 export function saveUserInput() {

@@ -1,58 +1,47 @@
 import { renderNavBars } from "./navBar.js";
 import { addOns } from "./data.js";
+import { getFromStorage } from "./sessionStorage.js";
 
 renderNavBars();
 
 
 function renderPage() {
+  const { selectedPlan } = getFromStorage();
+  const duration = selectedPlan.duration;
+
   const html = `
   <h1 class="main__header">Pick add-ons</h1>
   <p class="main__desc">Add-ons help enhance your gaming experience.</p>
 
-  <section class="section js-section">
-    <div class="section__container step3--responsive">
-      <div>
-        <input type="checkbox">
-      </div>
-      <div class="container__plan-div">
-        <p class="container__level">Online service</p>
-        <p class="section__desc">Access to multiplayer games</p>
-      </div>
-      <div class="section__extra-fee">
-        +$1/mo
-      </div>
-    </div>
-    <div class="section__container step3--responsive">
-      <div>
-        <input type="checkbox">
-      </div>
-      <div class="container__plan-div">
-        <p class="container__level">Larger storage</p>
-        <p class="section__desc">Extra 1TB of cloud save</p>
-      </div>
-      <div class="section__extra-fee">
-        +$2/mo
-      </div>
-    </div>
-    <div class="section__container step3--responsive">
-      <div class="checkbox-div">
-        <input type="checkbox">
-      </div>
-      <div class="container__plan-div">
-        <p class="container__level">Customizable profile</p>
-        <p class="section__desc">Custom theme on your profile</p>
-      </div>
-      <div class="section__extra-fee">
-        +$2/mo
-      </div>
-    </div>
-  </section>
+  <section class="section js-section">${addOnsHTML(duration)}</section>
   `
 
   document.querySelector('.js-main').innerHTML = html;
 }
 
+function addOnsHTML(billingCycle) {
+  let html = "";
 
+  addOns.forEach((addOn) => {
+    const fee = addOn.billing[billingCycle];
+
+    html +=`
+      <div class="section__container step3--responsive">
+        <div>
+          <input type="checkbox">
+        </div>
+        <div class="container__plan-div">
+          <p class="container__level">${addOn.name}</p>
+          <p class="section__desc">${addOn.desc}</p>
+        </div>
+        <div class="section__extra-fee">
+          +$${fee.fee}${fee.cycle}
+        </div>
+      </div>
+    `
+  })
+  return html;
+}
 
 
 function initializePage() {
