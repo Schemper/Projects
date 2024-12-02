@@ -1,6 +1,6 @@
 import { renderNavBars } from "./navBar.js";
 import { plans, selectedPlan } from "./data.js";
-import { saveToStorage, getFromStorage } from "./sessionStorage.js";
+import { getFromStorage, saveSelectedPlan } from "./sessionStorage.js";
 
 renderNavBars(); // Render navigation bars
 
@@ -128,7 +128,7 @@ function savePlan() {
   selectedPlan.planName = planName;
   selectedPlan.duration = duration;
 
-  saveToStorage(selectedPlan);
+  saveSelectedPlan(selectedPlan);
 
   window.location.href = "Step_3.html";
 }
