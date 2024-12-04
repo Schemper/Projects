@@ -12,85 +12,17 @@
 <body>
 
   <div class="page page--responsive">
-    <nav class="steps">
-      <ul class="steps__list">
-        <li class="steps__item">
-          <a class="steps__link" href="Step_1.html">1</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 1</span>
-            <span class="step-text step-text--desc">Your Info</span>
-          </div>
-        </li>
-        <li class="steps__item">
-          <a class="steps__link" href="Step_2.html">2</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 2</span>
-            <span class="step-text step-text--desc">Select Plan</span>
-          </div>
-        </li>
-        <li class="steps__item">
-          <a class="steps__link" href="Step_3.html">3</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 3</span>
-            <span class="step-text step-text--desc">Add-Ons</span>
-          </div>
-        </li>
-        <li class="steps__item">
-          <a class="steps__link" href="Step_4.html">4</a>
-          <div class="step-info">
-            <span class="step-text step-text--number">Step 4</span>
-            <span class="step-text step-text--desc">Summary</span>
-          </div>
-        </li>
-      </ul>
-    </nav>
+    <nav class="steps js-steps"></nav>
 
     <div class="layout__form">
-      <main class="main">
-        <h1 class="main__header">
-          Finishing up
-        </h1>
-        <p class="main__desc">
-          Double-check everything looks OK before confirming.
-        </p>
-
-        <div class="summary">
-          <div class="summary__block summary__duration">
-            <div class="summary__duration--layout">
-              
-              Arcade (Monthly)
-              
-              <a class="summary__duration-change" href="">
-                Change
-              </a>
-            </div>
-              
-            <div class="summary__duration--layout summary__duration-price">$9/mo</div>
-          </div>
-          <div class="summary__block">
-            <p class="summary__desc">Online service</p>
-            <span class="summary__additional-fee">+$1/mo</span>
-          </div>
-          <div class="summary__block">
-            <p class="summary__desc">Larger storage</p>
-            <span class="summary__additional-fee">+$2/mo</span>
-          </div>
-        </div>
-        <div class="summary__total-card">
-          <p class="summary__desc summary__total-desc">Total (per-month)</p>
-          <span class="summary__total">+$12/mo</span>
-        </div>
+      <main class="main js-main">
+        
       </main>
     </div>
 
-    <footer class="footer">
-      <nav class="footer__nav">
-        <a class="footer__link footer__link--hidden" href="">Go Back</a>
-        <button class="footer__button footer__button--confirm" type="submit"  id="nextStepButton">
-          Confirm
-        </button>
-      </nav>
-    </footer>
+    <footer class="footer js-footer"></footer>
   </div>
+
+  <script type="module" src="Script/step_4.js"></script>
 </body>
 </html>
