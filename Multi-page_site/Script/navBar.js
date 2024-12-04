@@ -40,7 +40,9 @@ export function navBar() {
 export function activePage() {
   const pageNumberLinks = document.querySelectorAll('.js-steps__link');
   const currentPage = window.location.pathname.split('/').pop();
-  const footerNav = document.querySelector('.js-footer__link')
+  const footerNav = document.querySelector('.js-footer__link');
+
+  const footerButton = document.querySelector('.footer__button');
 
 
   pageNumberLinks.forEach( link => {
@@ -53,6 +55,11 @@ export function activePage() {
 
   if (currentPage !== 'Step_1.html' && footerNav) {
     footerNav.classList.add('footer__link--visible')
+  }
+
+  if (currentPage === 'Step_4.html') {
+    footerButton.textContent = 'Confirm';
+    footerButton.classList.add('footer__button--confirm');
   }
 }
 
@@ -84,7 +91,6 @@ function footerNav() {
       if (currentPageIndex > 0) {
         currentPageIndex--;
         window.location.href = steps[currentPageIndex];
-        getFromStorage();
       }
       
     });
