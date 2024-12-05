@@ -9,7 +9,7 @@
 
 .summary__block {
   padding: 0px 15px; /* Padding only on the left and right */
-  margin-bottom: 15px; /* Keeps a 15px distance between divs */
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -55,6 +55,17 @@
 
 .summary__additional-fee {
   color: hsl(213, 96%, 18%);
+}
+
+.addOn__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary__addOn {
+  display: flex;
+  margin-bottom: 15px; /* Keeps a 15px distance between divs */
+  justify-content: space-between;
 }
 
 .summary__total-card {
