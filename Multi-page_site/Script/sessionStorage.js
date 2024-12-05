@@ -1,9 +1,8 @@
-import { selectedPlan } from "./data.js";
-
 export function getFromStorage() {
   const userInput = JSON.parse(sessionStorage.getItem('userInput')) || {};
   const selectedPlan = JSON.parse(sessionStorage.getItem('selectedPlan')) || {};
-  return { userInput, selectedPlan }; // Return both as an object
+  const selectedAddOns = JSON.parse(sessionStorage.getItem('selectedAddOns')) || {};
+  return { userInput, selectedPlan, selectedAddOns }; 
 }
 
 
