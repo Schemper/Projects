@@ -83,10 +83,16 @@ function calculateTotal (selectedPlan, selectedAddOns) {
   return total;
 }
 
+function submitForm() {
+  window.location.href = "Thank You.html";
+}
+
 function initializePage() {
   const { selectedPlan, selectedAddOns } = getFromStorage();
 
   renderPage(selectedPlan, selectedAddOns);
+
+  document.querySelector('.footer__button').addEventListener('click', submitForm);
 
 }
 
