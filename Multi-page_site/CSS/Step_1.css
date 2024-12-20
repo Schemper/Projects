@@ -11,6 +11,14 @@
 
 .first-page__warning {
   color: hsl(354, 84%, 57%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.first-page__warning.fade-out {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .first-page__input {
@@ -20,6 +28,10 @@
   margin-bottom: 0.8rem;
   font-size: 0.8rem;
   color: hsl(213, 96%, 18%);
+}
+
+.first-page__input--warning {
+  border-color: hsl(354, 84%, 57%)
 }
 
 .first-page__input::placeholder {
