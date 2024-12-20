@@ -11,7 +11,7 @@ const html = `
     <label class="first-page__label" for="Name">Name</label>
     <span class="first-page__warning"></span>
   </div>
-  <input class="first-page__input first-page__input--warning" type="text" id="Name" placeholder="e.g. Stephen King" required>
+  <input class="first-page__input" type="text" id="Name" placeholder="e.g. Stephen King" required>
 
   <div class="first-page__label-group">
     <label class="first-page__label" for="email">Email Address</label>
@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+let addedMessageTimeoutId = {};
+
 
 function validateForm() {
 
@@ -71,25 +73,25 @@ function validateForm() {
   const warnings = document.querySelectorAll('.first-page__warning');
 
   let hasWarning = false;
-
-
+  
 
   /*iterated over the array inputs and checked if each 
   input is empty, if empty we add a new class with that is empty */
   inputs.forEach((input, index) => {
-    warnings[index].textContent = '';
+    const warningElement = warnings[index];
+    warningElement.textContent = '';
 
     if (input.value.trim() === '') {
-      warnings[index].textContent = 'This field is required';
+      flashWarning(warningElement, 'This field is required', index);
       hasWarning = true;
     } else {
       if (index === 1 && !emailRegex.test(input.value)) {
-        warnings[index].textContent = 'Invalid email address'; 
+        flashWarning(warningElement, 'Invalid email address', index);
         hasWarning = true;
       }
 
       if (index === 2 && !phoneRegex.test(input.value)) {
-        warnings[index].textContent = 'Invalid phone number';
+        flashWarning(warningElement, 'Invalid phone number', index);
         hasWarning = true;
       }
     }
@@ -98,39 +100,22 @@ function validateForm() {
   return !hasWarning;
 }
 
-
-/*inputs.forEach((input, index) => {
-  if (input.value.trim() === '') {
-    warnings[index].classList.add('not_added');
-    hasWarning = true;
-  } else if (input[1]  ) {
-    warnings[index].classList.remove('not_added');
+function flashWarning(warningElement, message, index) {
+  // Clear any existing timeout for this warning
+  if (addedMessageTimeoutId[index]) {
+    clearTimeout(addedMessageTimeoutId[index]);
   }
-})
 
+  // Set the warning message
+  warningElement.textContent = message;
+  warningElement.classList.remove('fade-out', 'first-page__input--warning');
 
-const warning = [
-  'This field is required',
-  'This is an invalid Input'
-]
+  addedMessageTimeoutId[index] = setTimeout(() => {
+    warningElement.classList.add('fade-out', 'first-page__input--warning');
 
-function checkInput() {
-  inputs.forEach((input, index) => {
-    if (input.value.trim() === '') {
-      warning[0] 
-    } else {
-      warning[1] 
-    }
-  });
+    // Clear the message after the fade-out transition (500ms delay to match CSS)
+    setTimeout(() => {
+      warningElement.textContent = '';
+    }, 1000);
+  }, 2000);
 }
-
-function validateEmail() {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-  if (emailRegex.test(inputs[1].value)) {
-    console.log('valid email')
-  } else {
-    console.log('invalid email')
-  }
-}*/
