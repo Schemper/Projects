@@ -1,3 +1,10 @@
+export const stepsData = [
+  { href: "Step_1.html", number: "1", title: "Step 1", description: "Your Info" },
+  { href: "Step_2.html", number: "2", title: "Step 2", description: "Select Plan" },
+  { href: "Step_3.html", number: "3", title: "Step 3", description: "Add-Ons" },
+  { href: "Step_4.html", number: "4", title: "Step 4", description: "Summary" },
+];
+
 export const plans = {
   Arcade: {
     img: "images/icon-arcade.svg",

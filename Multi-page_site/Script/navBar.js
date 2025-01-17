@@ -1,36 +1,24 @@
+import { getFromStorage } from "./sessionStorage.js";
+import { stepsData } from "./data.js";
+
 export function navBar() {
   const html = `
     <ul class="steps__list">
-      <li class="steps__item">
-        <a class="steps__link js-steps__link" href="Step_1.html">1</a>
-        <div class="step-info">
-          <span class="step-text step-text--number">Step 1</span>
-          <span class="step-text step-text--desc">Your Info</span>
-        </div>
-      </li>
-      <li class="steps__item">
-        <a class="steps__link js-steps__link" href="Step_2.html">2</a>
-        <div class="step-info">
-          <span class="step-text step-text--number">Step 2</span>
-          <span class="step-text step-text--desc">Select Plan</span>
-        </div>
-      </li>
-      <li class="steps__item">
-        <a class="steps__link js-steps__link" href="Step_3.html">3</a>
-        <div class="step-info">
-          <span class="step-text step-text--number">Step 3</span>
-          <span class="step-text step-text--desc">Add-Ons</span>
-        </div>
-      </li>
-      <li class="steps__item">
-        <a class="steps__link js-steps__link" href="Step_4.html">4</a>
-        <div class="step-info">
-          <span class="step-text step-text--number">Step 4</span>
-          <span class="step-text step-text--desc">Summary</span>
-        </div>
-      </li>
+      ${stepsData
+        .map(
+          step => `
+        <li class="steps__item">
+          <a class="steps__link js-steps__link" href="${step.href}">${step.number}</a>
+          <div class="step-info">
+            <span class="step-text step-text--number">${step.title}</span>
+            <span class="step-text step-text--desc">${step.description}</span>
+          </div>
+        </li>
+      `
+        )
+        .join("")}
     </ul>
-  `
+  `;
 
   document.querySelector('.js-steps')
   .innerHTML = html;
