@@ -1,6 +1,8 @@
 import { getFromStorage } from "./sessionStorage.js";
 import { stepsData } from "./data.js";
 
+const {selectedPlan} = getFromStorage() || {};
+
 export function navBar() {
   const html = `
     <ul class="steps__list">
@@ -23,6 +25,23 @@ export function navBar() {
   document.querySelector('.js-steps')
   .innerHTML = html;
 
+  const pageNumberLinks = document.querySelectorAll('.js-steps__link');
+  pageNumberLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = e.currentTarget.getAttribute('href'); // Use e.currentTarget to get the <a> element
+      
+      // Check if the user is trying to navigate to Step 3 or Step 4
+      if (href === 'Step_3.html' || href === 'Step_4.html') {
+
+        //Check if there is no selectedPlan in the storage
+        if (!selectedPlan || !selectedPlan.planName) {
+          e.preventDefault();  // Prevent navigation
+          alert('Please Select a Plan on Page 2');
+        }
+      }
+    });
+  });
+
 }
 
 export function activePage() {
@@ -42,13 +61,14 @@ export function activePage() {
   });
 
   if (currentPage !== 'Step_1.html' && footerNav) {
-    footerNav.classList.add('footer__link--visible')
+    footerNav.classList.add('footer__link--visible');
   }
 
   if (currentPage === 'Step_4.html') {
     footerButton.textContent = 'Confirm';
     footerButton.classList.add('footer__button--confirm');
   }
+
 }
 
 
