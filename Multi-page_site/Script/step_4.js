@@ -1,5 +1,5 @@
 import { renderNavBars } from "./navBar.js";
-import { getFromStorage } from "./sessionStorage.js";
+import { getFromStorage, validatePageAccess } from "./sessionStorage.js";
 
 renderNavBars();
 
@@ -88,6 +88,11 @@ function submitForm() {
 }
 
 function initializePage() {
+  const currentStep = 'Step_4.html';
+  if (!validatePageAccess(currentStep)) {
+    return; // Stop further execution if access is invalid
+  }
+
   const { selectedPlan, selectedAddOns } = getFromStorage();
 
   renderPage(selectedPlan, selectedAddOns);

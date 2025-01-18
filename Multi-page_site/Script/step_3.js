@@ -1,6 +1,6 @@
 import { renderNavBars } from "./navBar.js";
 import { addOns } from "./data.js";
-import { getFromStorage, saveSelectedAddOns } from "./sessionStorage.js";
+import { getFromStorage, saveSelectedAddOns, validatePageAccess } from "./sessionStorage.js";
 
 renderNavBars();
 
@@ -82,6 +82,12 @@ function saveAddOns() {
 function initializePage() {
   const { selectedPlan } = getFromStorage();
   const duration = selectedPlan.duration;
+
+  const currentStep = 'Step_3.html';
+  if (!validatePageAccess(currentStep)) {
+    return; // Stop further execution if access is invalid
+  }
+  
 
   renderPage(duration);
 
