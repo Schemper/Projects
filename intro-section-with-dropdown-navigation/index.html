@@ -8,39 +8,58 @@
 </head>
 <body class="body">
   <div class="page page--responsive">
-    
-    <nav class="nav">
-      <ul class="nav__menu">
-        <li class="nav__menu-logo">
-          <img class="nav__logo" src="./resources/logo.svg" alt="Company logo">
-        </li>
-        <li class="nav__menu-item">
-          <img class="nav__menu-icon" src="./resources/icon-close-menu.svg" alt="Close menu">
-        </li>
-        <li class="nav__menu-item">
-          <a class="nav__menu-link" href="#">Features</a>
-        </li>
-        <li class="nav__menu-item">
-          <a class="nav__menu-link" href="#">Company</a>
-        </li>
-        <li class="nav__menu-item">
-          <a class="nav__menu-link" href="#">Careers</a>
-        </li>
-        <li class="nav__menu-item">
-          <a class="nav__menu-link" href="#">About</a>
-        </li>
-      </ul>
 
-      <div class="nav__actions">
-        <a class="nav__login" href="#">Login</a>
-        <button class="nav__register-button">
-          Register
-        </button>
+    <nav class="navbar" aria-label="Primary Navigation">
+      <div class="navbar__brand">
+        <img class="navbar__img" src="./resources/logo.svg" alt="Logo">
+        <img class="navbar__img navbar__menu-icon" src="./resources/icon-menu.svg" alt="Menu">
       </div>
+
+      <aside class="sidebar  js-sidebar">
+        <span class="sidebar__menu-item">
+          <img class="sidebar__close-icon js-sidebar__close-icon" src="./resources/icon-close-menu.svg" alt="Close menu">
+        </span>
+        <ul class="sidebar__menu">
+          <li class="sidebar__menu-item">
+            <a class="sidebar__menu-link" href="#">Features</a>
+            <span class="sidebar__menu-arrow"></span>
+            <ul class="sidebar__submenu">
+              <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Todo List</a></li>
+              <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Calendar</a></li>
+              <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Reminders</a></li>
+              <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Planning</a></li>
+            </ul>
+          </li>
+          <li class="sidebar__menu-item">
+            <a class="sidebar__menu-link" href="#">Company</a>
+            <span class="sidebar__menu-arrow"></span>
+            <ul class="sidebar__submenu">
+              <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">History</a></li>
+              <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Our Team</a></li>
+              <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Blog</a></li>
+            </ul>
+          </li>
+          <li class="sidebar__menu-item">
+            <a class="sidebar__menu-link" href="#">Careers</a>
+          </li>
+          <li class="sidebar__menu-item">
+            <a class="sidebar__menu-link" href="#">About</a>
+          </li>
+        </ul>
+        <div class="sidebar__actions">
+          <a class="sidebar__login" href="#">Login</a>
+          <button class="sidebar__register-button">Register</button>
+        </div>
+      </aside>
     </nav>
     
+    
     <main class="main">
-      <div class="main__image-container"></div>
+      <picture>
+        <source srcset="./resources/image-hero-desktop.png" media="(min-width: 768px)">
+        <source srcset="./resources/image-hero-mobile.png" media="(max-width: 767px)">
+        <img src="./resources/image-hero-mobile.png" alt="Example image" class="responsive-image">
+      </picture>
       <div class="main__description">
         <h1 class="main__heading">
           Make remote work
@@ -60,5 +79,7 @@
       </div>
     </main>
   </div>
+
+  <script src="./snap.js" type="module"></script>
 </body>
 </html>
