@@ -179,13 +179,25 @@ body {
   font-size: 0.85rem;
 }
 
-.main__image-container {
-  height: auto;
+.main {
+  background-color: inherit;
+}
+
+.main__image {
+  height: 350px;
   width: 100%;
-  background-image: url('./resources/image-hero-mobile.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.main__image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 
