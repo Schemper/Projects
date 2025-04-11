@@ -1,0 +1,120 @@
+.navbar__brand {
+  background-color: yellow;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__img {
+  height: 10%;
+
+}
+
+.navbar__menu-icon {
+  cursor: pointer;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 60%;
+  background-color: hsl(0, 0%, 100%);
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+  z-index: 10;
+}
+
+.sidebar--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.sidebar:not(.sidebar--visible) {
+  transition-delay: 0s, 0.4s; /* Delay opacity to match the slide-out */
+}
+
+
+.sidebar__menu, .sidebar__submenu {
+  text-decoration: none;
+  padding-left: 20px;
+  font-size: .85rem;
+  padding-top: 10px;
+}
+
+.sidebar__submenu {
+  display: none;
+}
+
+.sidebar__submenu-item span {
+  margin-right: 10px;
+}
+
+.sidebar__menu-item, .sidebar__submenu-item {
+  padding: 10px 20px;
+  list-style: none;
+}
+
+.sidebar__submenu-item {
+  display: flex;
+}
+
+.submenu--visible {
+  display: initial;
+} 
+
+.sidebar__close-icon {
+  float: right;
+  padding-right: 20px;
+  padding-top: 10px;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+.sidebar__menu-link, .sidebar__submenu-link {
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+}
+
+.sidebar__menu-arrow {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-arrow--down {
+  
+}
+
+.sidebar__actions {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar__login {
+  text-decoration: none;
+  color: hsl(0, 0%, 41%);
+  margin-bottom: 20px;
+  font-size: .85rem;
+}
+
+.sidebar__register-button {
+  background-color: transparent;
+  border: solid .1rem hsl(0, 0%, 41%);
+  padding: 3% 27%;
+  color: hsl(0, 0%, 41%);
+  border-radius: 0.7rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
