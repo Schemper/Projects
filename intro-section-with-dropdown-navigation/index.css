@@ -47,12 +47,11 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Epilogue', sans-serif;
-  width: 100%;
+  width: 375px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100dvh;
+  justify-self: center;
   margin: 0;
+  max-height: 100dvh;
 }
 
 
@@ -62,7 +61,6 @@ body {
   background-color: hsl(0, 0%, 98%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  height: 100dvh;
   position: relative;
 }
 
@@ -72,19 +70,19 @@ body {
 }
 
 .main__image {
-  height: 350px;
-  width: 100%;
+  height: 270px;
+  width: inherit;
 }
 
 .main__image picture {
   display: block;
   width: 100%;
-  height: 100%;
+  height: inherit;
 }
 
 .responsive-image {
   width: 100%;
-  height: 100%;
+  height: inherit;
   object-fit: fill;
 }
 
@@ -98,11 +96,14 @@ body {
   padding: 20px;
 }
 
+.main__heading {
+  margin: 0;
+}
+
 .main__text {
-  margin: 1.2rem 0;
   color: hsl(0, 0%, 41%);
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
 .main__button {
@@ -113,9 +114,17 @@ body {
   font-size: .5rem;
   border-radius: .7em;
   cursor: pointer;
+  margin: 0.6rem 0;
 }
 
 .main__clients {
+  margin-top: 1rem;
   display: flex;
-  margin-top: 2em;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.main__client-logo {
+  width: 50px;
+  object-fit: contain;
 }
