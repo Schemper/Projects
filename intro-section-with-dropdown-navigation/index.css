@@ -99,7 +99,7 @@ body {
 .main__heading {
   margin: 0;
   line-height: 1;
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(2rem, 4.5vw, 4rem);
 }
 
 .main__text {
@@ -149,14 +149,15 @@ body {
     justify-content: space-between;
     align-items: center; 
     height: 100vh; 
-    padding: 0 100px;
+    padding: 50px 150px 100px 150px;
   }
 
   .main__description {
     width: 40%;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
+    padding: 0;
   }
 
   .line-1,
@@ -175,7 +176,7 @@ body {
   }
 
  .responsive-image{
-  padding: 80px 0;
+  
  }
 
  .main__client-logo {

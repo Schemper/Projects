@@ -10,14 +10,14 @@
 <body class="body">
   <div class="page page--responsive">
 
-    <nav class="navbar" aria-label="Primary Navigation">
+    <nav class="navbar navbar--responsive" aria-label="Primary Navigation">
       <div class="navbar__brand">
         <img class="navbar__img" src="./resources/logo.svg" alt="Logo">
         <img class="navbar__img navbar__menu-icon" src="./resources/icon-menu.svg" alt="Menu">
       </div>
 
-      <aside class="sidebar  js-sidebar">
-        <span class="sidebar__menu-item">
+      <aside class="sidebar  js-sidebar sidebar--responsive">
+        <span class="sidebar__menu-item close-icon--hidden">
           <img class="sidebar__close-icon js-sidebar__close-icon" src="./resources/icon-close-menu.svg" alt="Close menu">
         </span>
         <ul class="sidebar__menu">
@@ -26,7 +26,7 @@
 
             <button class="sidebar__menu-arrow"><img src="./resources/icon-arrow-down.svg" alt="" class="menu-arrow-image"></button>
   
-            <ul class="sidebar__submenu">
+            <ul class="sidebar__submenu submenu--tooltip">
               <li class="sidebar__submenu-item">
                 <span>
                   <img src="./resources/icon-todo.svg" alt="">
@@ -59,7 +59,7 @@
 
             <button class="sidebar__menu-arrow"><img src="./resources/icon-arrow-down.svg" alt="" class="menu-arrow-image"></button>
 
-            <ul class="sidebar__submenu">
+            <ul class="sidebar__submenu submenu--tooltip">
               <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">History</a></li>
               <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Our Team</a></li>
               <li class="sidebar__submenu-item"><a href="#" class="sidebar__submenu-link">Blog</a></li>
@@ -77,7 +77,7 @@
           <button class="sidebar__register-button">Register</button>
         </div>
       </aside>
-    </nav>
+    </nav>   
     
     
     <main class="main">
