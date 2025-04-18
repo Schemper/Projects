@@ -43,9 +43,9 @@
 
 .sidebar__menu, .sidebar__submenu {
   text-decoration: none;
-  padding-left: 20px;
   font-size: .85rem;
-  padding-top: 10px;
+  padding-left: 2vw;   /* scales with viewport width */
+  padding-top: 1vh;    /* scales with viewport height */
 }
 
 .sidebar__submenu {
@@ -59,6 +59,7 @@
 .sidebar__menu-item, .sidebar__submenu-item {
   padding: 10px 20px;
   list-style: none;
+  
 }
 
 .sidebar__submenu-item {
@@ -83,14 +84,15 @@
   color: hsl(0, 0%, 41%);
 }
 
+.sidebar__menu-link,
+.sidebar__menu-arrow {
+  transition: all 0.3s ease;
+}
+
 .sidebar__menu-arrow {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-.menu-arrow--down {
-  
 }
 
 .sidebar__actions {
@@ -106,6 +108,7 @@
   text-decoration: none;
   color: hsl(0, 0%, 41%);
   font-size: .85rem;
+  transition: all 0.4s ease;
 }
 
 .sidebar__register-button {
@@ -116,6 +119,7 @@
   border-radius: 0.7rem;
   cursor: pointer;
   font-size: 0.85rem;
+  transition: all 0.4s ease;
 }
 
 @media (min-width: 768px) {
@@ -144,6 +148,60 @@
     padding: 0 30px;
   }
   
+  .sidebar__menu {
+    width: 35%;
+    min-width: 20rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sidebar__menu-item {
+    position: relative;
+    padding: 0;
+  }
+
+  .sidebar__submenu {
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    width: fit-content;
+    padding: 0.25rem 0;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    opacity: 0;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+  }
+
+  .sidebar__submenu-item {
+    padding: 0.25rem 1rem;
+  }
+
+  .submenu--visible {
+    display: block; 
+    max-height: 500px; 
+    opacity: 1;
+  }
+
+  .sidebar__menu-item:hover .sidebar__menu-link,
+  .sidebar__menu-item:hover .sidebar__menu-arrow {
+  color: hsl(0, 0%, 8%);
+  font-weight: 500;
+  }
+
+  .tooltip1 {
+    top: 2rem;       
+    left: -2.5rem;
+    width: 7.7rem;
+  }
+
+  .tooltip2 {
+    top: 2rem;
+    left: 0rem;
+    width: 6rem;
+  }
+
   .close-icon--hidden {
     display: none;
   }
@@ -166,8 +224,20 @@
     font-size: .85rem;
   }
 
+  .sidebar__login:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 500;
+  }
+
   .sidebar__register-button {
     padding: 0.3rem 1.2rem;
   }
+
+  .sidebar__register-button:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 500;
+    border-color: hsl(0, 0%, 8%);
+  }
+
 
 }
